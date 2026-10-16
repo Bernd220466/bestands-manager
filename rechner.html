@@ -73,6 +73,12 @@ table.sens tr.active td{font-weight:700;color:var(--orange-ink)}
 .formula{font-variant-numeric:tabular-nums;background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:10px 12px;font-size:.92rem;color:var(--ink)}
 .note{font-size:.88rem;color:var(--muted);max-width:75ch}
 
+.term{text-decoration:underline dotted;text-decoration-thickness:1.5px;text-underline-offset:3px;cursor:help;border-radius:2px}
+.term:focus-visible{outline:2px solid var(--orange);outline-offset:2px}
+.tip{position:fixed;z-index:50;max-width:min(340px,calc(100vw - 32px));background:var(--ink);color:var(--bg);border-radius:6px;padding:12px 14px;font:400 .92rem/1.5 var(--body);text-transform:none;letter-spacing:0;box-shadow:0 6px 24px rgb(0 0 0 / .25);pointer-events:none}
+.tip strong{display:block;margin-bottom:4px;font-weight:700}
+.tip .f{display:block;margin-top:6px;font-weight:600;color:var(--orange-soft)}
+
 @media (max-width:900px){
   .calc{grid-template-columns:1fr}
   .results{position:static}
@@ -114,37 +120,37 @@ table.sens tr.active td{font-weight:700;color:var(--orange-ink)}
 
         <p class="group-title">Aus der Bilanz</p>
         <div class="field">
-          <label for="vorraete">Vorräte (Lagerbestand)</label>
-          <span class="where">Aktiva, Position B.I „Vorräte“. Am besten der Durchschnitt aus Anfangs- und Endbestand.</span>
+          <label for="vorraete"><span class="term" tabindex="0" data-term="vorraete">Vorräte</span> (Lagerbestand)</label>
+          <span class="where">Bilanz, Aktiva, Position B.I „Vorräte“ (§ 266 HGB). Genauer wird es mit dem Durchschnitt aus Anfangs- und Endbestand.</span>
           <div class="input-wrap"><input id="vorraete" inputmode="numeric" value="1.800.000" aria-describedby="u1"><span class="unit" id="u1">€</span></div>
         </div>
         <div class="field">
-          <label for="bilanzsumme">Bilanzsumme</label>
+          <label for="bilanzsumme"><span class="term" tabindex="0" data-term="bilanzsumme">Bilanzsumme</span></label>
           <span class="where">Summe der Aktiva bzw. Passiva.</span>
           <div class="input-wrap"><input id="bilanzsumme" inputmode="numeric" value="4.500.000"><span class="unit">€</span></div>
         </div>
 
         <p class="group-title">Aus der Gewinn- und Verlustrechnung</p>
         <div class="field">
-          <label for="wareneinsatz">Wareneinsatz</label>
-          <span class="where">Materialaufwand bzw. Aufwand für bezogene Waren (GuV, Position 5).</span>
+          <label for="wareneinsatz"><span class="term" tabindex="0" data-term="wareneinsatz">Wareneinsatz</span></label>
+          <span class="where">Im Gesamtkostenverfahren in der GuV unter Position 5a „Aufwendungen für Roh-, Hilfs- und Betriebsstoffe und für bezogene Waren“. Bei reinen Händlern meist der Wareneinsatz.</span>
           <div class="input-wrap"><input id="wareneinsatz" inputmode="numeric" value="5.600.000"><span class="unit">€</span></div>
         </div>
         <div class="field">
-          <label for="ergebnis">Jahresüberschuss</label>
-          <span class="where">GuV, Position 17. Bei einem Verlust mit Minus eintragen.</span>
+          <label for="ergebnis"><span class="term" tabindex="0" data-term="ergebnis">Jahresüberschuss</span></label>
+          <span class="where">GuV, Position 17 (§ 275 Abs. 2 HGB). Bei einem Verlust mit Minus eintragen.</span>
           <div class="input-wrap"><input id="ergebnis" inputmode="numeric" value="240.000"><span class="unit">€</span></div>
         </div>
 
         <p class="group-title">Ihre Annahmen</p>
         <div class="field">
-          <label for="kostensatz">Lagerhaltungskostensatz pro Jahr</label>
+          <label for="kostensatz"><span class="term" tabindex="0" data-term="kostensatz">Lagerhaltungskostensatz</span> pro Jahr</label>
           <span class="where">Kosten pro Jahr in Prozent des Bestandswerts: Zinsen auf das gebundene Kapital, Schwund, Veralterung sowie mengenabhängige Kosten für Fläche, Personal und Versicherung. Im Handel liegt er oft zwischen 15 und 30 %.</span>
           <div class="range-row"><input type="range" id="kostensatz" min="5" max="40" step="1" value="20"><output id="kostensatzOut" for="kostensatz">20 %</output></div>
         </div>
         <div class="field">
           <label for="reduktion">Ziel: Bestand senken um</label>
-          <span class="where">Bei gleicher Lieferfähigkeit. 15 bis 25 % sind in vielen Lagern ein realistischer Startwert.</span>
+          <span class="where">Bei gleicher <span class="term" tabindex="0" data-term="lieferfaehigkeit">Lieferfähigkeit</span>. 15 bis 25 % sind in vielen Lagern ein realistischer Startwert.</span>
           <div class="range-row"><input type="range" id="reduktion" min="5" max="50" step="1" value="20"><output id="reduktionOut" for="reduktion">20 %</output></div>
         </div>
         <button type="button" class="reset" id="reset">Beispielwerte wiederherstellen</button>
@@ -152,20 +158,20 @@ table.sens tr.active td{font-weight:700;color:var(--orange-ink)}
 
       <div class="results" aria-live="polite">
         <div class="headline-result">
-          <span class="lbl">Ihr Lagerbestand kostet Sie pro Jahr etwa</span>
+          <span class="lbl">Ihr Lagerbestand kostet Sie pro Jahr etwa (<span class="term" tabindex="0" data-term="lhk">Lagerhaltungskosten</span>)</span>
           <span class="big" id="rKosten">–</span>
           <p id="rKostenText">–</p>
         </div>
 
         <div class="kpis">
-          <div class="kpi"><span class="lbl">Freisetzbare Liquidität</span><span class="val" id="rLiqui">–</span><span class="sub">einmalig, durch weniger Bestand</span></div>
-          <div class="kpi"><span class="lbl">Einsparung pro Jahr</span><span class="val" id="rSpar">–</span><span class="sub">weniger Lagerhaltungskosten</span></div>
-          <div class="kpi"><span class="lbl">Lagerumschlag</span><span class="val" id="rUmschlag">–</span><span class="sub" id="rUmschlagSub">–</span></div>
-          <div class="kpi"><span class="lbl">Lagerreichweite</span><span class="val" id="rReichweite">–</span><span class="sub" id="rReichweiteSub">–</span></div>
+          <div class="kpi"><span class="lbl"><span class="term" tabindex="0" data-term="liqui">Freisetzbare Liquidität</span></span><span class="val" id="rLiqui">–</span><span class="sub">einmalig, durch weniger Bestand</span></div>
+          <div class="kpi"><span class="lbl"><span class="term" tabindex="0" data-term="spar">Einsparung pro Jahr</span></span><span class="val" id="rSpar">–</span><span class="sub">weniger Lagerhaltungskosten</span></div>
+          <div class="kpi"><span class="lbl"><span class="term" tabindex="0" data-term="umschlag">Lagerumschlag</span></span><span class="val" id="rUmschlag">–</span><span class="sub" id="rUmschlagSub">–</span></div>
+          <div class="kpi"><span class="lbl"><span class="term" tabindex="0" data-term="reichweite">Lagerreichweite</span></span><span class="val" id="rReichweite">–</span><span class="sub" id="rReichweiteSub">–</span></div>
         </div>
 
         <div class="compare">
-          <h3>Gesamtkapitalrendite vorher und nachher</h3>
+          <h3><span class="term" tabindex="0" data-term="gkr">Gesamtkapitalrendite</span> vorher und nachher</h3>
           <div class="bar-row"><span class="name">Heute</span><div class="track"><div class="fill" id="bVor"></div></div><span class="num" id="rRoiVor">–</span></div>
           <div class="bar-row after"><span class="name">Mit Ziel</span><div class="track"><div class="fill" id="bNach"></div></div><span class="num" id="rRoiNach">–</span></div>
           <p class="note" id="rRoiText">–</p>
@@ -175,7 +181,7 @@ table.sens tr.active td{font-weight:700;color:var(--orange-ink)}
           <h3>Was bringt welches Ziel?</h3>
           <div class="table-wrap">
             <table class="sens">
-              <thead><tr><th>Bestand senken um</th><th>Liquidität frei</th><th>Einsparung / Jahr</th><th>Kapitalrendite</th></tr></thead>
+              <thead><tr><th>Bestand senken um</th><th>Liquidität frei</th><th>Einsparung / Jahr</th><th><span class="term" tabindex="0" data-term="gkr">Kapitalrendite</span></th></tr></thead>
               <tbody id="sensBody"></tbody>
             </table>
           </div>
@@ -194,18 +200,18 @@ table.sens tr.active td{font-weight:700;color:var(--orange-ink)}
       </div>
       <div class="explain">
         <div>
-          <h3>Lagerumschlag</h3>
-          <p>Wie oft sich Ihr Bestand im Jahr komplett erneuert. Je höher, desto weniger Geld liegt im Regal.</p>
-          <p class="formula">Wareneinsatz ÷ Vorräte</p>
+          <h3><span class="term" tabindex="0" data-term="umschlag">Lagerumschlag</span></h3>
+          <p>Wie oft sich Ihr durchschnittlicher Bestand im Jahr umschlägt. Je höher, desto weniger Kapital ist im Verhältnis zum Absatz gebunden.</p>
+          <p class="formula">Wareneinsatz ÷ durchschnittlicher Lagerbestand (beides zu Einstandspreisen)</p>
         </div>
         <div>
-          <h3>Lagerhaltungskosten</h3>
+          <h3><span class="term" tabindex="0" data-term="lhk">Lagerhaltungskosten</span></h3>
           <p>Was der Bestand jedes Jahr kostet, auch wenn es auf keiner Rechnung so steht: Zinsen auf das gebundene Kapital, Schwund, Veralterung und der Teil von Fläche und Personal, der mit der Menge wächst. Fixkosten wie die Lagermiete sind nicht gemeint.</p>
-          <p class="formula">Vorräte × Kostensatz</p>
+          <p class="formula">durchschnittlicher Lagerbestand × Lagerhaltungskostensatz</p>
         </div>
         <div>
-          <h3>Gesamtkapitalrendite</h3>
-          <p>Wie gut Ihr eingesetztes Kapital arbeitet. Weniger Bestand senkt das gebundene Kapital und die Kosten zugleich.</p>
+          <h3><span class="term" tabindex="0" data-term="gkr">Gesamtkapitalrendite</span> (vereinfacht)</h3>
+          <p>Wie gut Ihr eingesetztes Kapital arbeitet. Weniger Bestand senkt das gebundene Kapital und die Kosten zugleich. Die klassische Formel rechnet zum Gewinn noch die Fremdkapitalzinsen hinzu; der Rechner vereinfacht hier.</p>
           <p class="formula">Jahresüberschuss ÷ Bilanzsumme</p>
         </div>
       </div>
@@ -321,6 +327,53 @@ table.sens tr.active td{font-weight:700;color:var(--orange-ink)}
   });
   $('calc').addEventListener('submit', e => e.preventDefault());
   render();
+})();
+</script>
+<div class="tip" id="tip" role="tooltip" hidden></div>
+<script>
+(function(){
+  const DEF = {
+    vorraete:["Vorräte","Bilanzposten auf der Aktivseite (§ 266 HGB, B.I). Umfasst Roh-, Hilfs- und Betriebsstoffe, unfertige und fertige Erzeugnisse, Waren sowie geleistete Anzahlungen. Bewertet zu Anschaffungs- bzw. Herstellungskosten, höchstens zum niedrigeren beizulegenden Wert. Im Handel sind es überwiegend Waren."],
+    bilanzsumme:["Bilanzsumme","Summe aller Vermögenswerte auf der Aktivseite. Sie ist immer gleich der Summe aus Eigen- und Fremdkapital auf der Passivseite und entspricht damit dem Gesamtkapital."],
+    wareneinsatz:["Wareneinsatz","Einstandswert der im Jahr verkauften Waren, also zu Einkaufspreisen inklusive Bezugskosten.","Anfangsbestand + Wareneinkauf − Endbestand"],
+    ergebnis:["Jahresüberschuss","Gewinn des Geschäftsjahres nach Steuern laut Gewinn- und Verlustrechnung. Ist er negativ, heißt er Jahresfehlbetrag."],
+    kostensatz:["Lagerhaltungskostensatz","Jährliche Kosten der Bestandshaltung in Prozent des durchschnittlichen Bestandswerts. Enthält Kapitalbindungskosten (Zinsen), Risikokosten (Schwund, Veralterung, Wertverlust) und die mengenabhängigen Kosten für Fläche, Personal und Versicherung."],
+    lhk:["Lagerhaltungskosten","Kosten, die entstehen, weil Ware auf Lager liegt. Gemeint sind nur die bestandsabhängigen Kosten; fixe Lagerkosten wie Miete oder Regale bleiben außen vor.","Ø Lagerbestand × Lagerhaltungskostensatz"],
+    liqui:["Freisetzbare Liquidität","Geld, das einmalig frei wird, wenn der durchschnittliche Bestand bei gleichem Absatz dauerhaft sinkt. Es fließt nicht als Gewinn zu, sondern wird nicht mehr in Ware gebunden.","Ø Lagerbestand × Senkung in %"],
+    spar:["Einsparung pro Jahr","Lagerhaltungskosten, die durch den niedrigeren Bestand jedes Jahr wegfallen. Vor Steuern gerechnet.","freigesetzte Liquidität × Lagerhaltungskostensatz"],
+    umschlag:["Lagerumschlag","Auch Umschlagshäufigkeit. Gibt an, wie oft der durchschnittliche Lagerbestand im Jahr durch den Absatz erneuert wird.","Wareneinsatz ÷ Ø Lagerbestand (zu Einstandspreisen)"],
+    reichweite:["Lagerreichweite","Hier die durchschnittliche Lagerdauer: wie viele Tage der durchschnittliche Bestand beim bisherigen Verbrauch reicht.","365 ÷ Lagerumschlag"],
+    gkr:["Gesamtkapitalrendite","Zeigt, wie viel Gewinn das gesamte eingesetzte Kapital erwirtschaftet. Klassisch wird zum Gewinn noch der Fremdkapitalzins addiert. Der Rechner nutzt die vereinfachte Form.","Jahresüberschuss ÷ Bilanzsumme"],
+    lieferfaehigkeit:["Lieferfähigkeit","Anteil der Kundenaufträge oder Positionen, die sofort aus dem Lager bedient werden können. Weniger Bestand ist nur dann ein Gewinn, wenn die Lieferfähigkeit gleich bleibt."]
+  };
+  const tip = document.getElementById('tip');
+  let current = null;
+  function show(el){
+    const d = DEF[el.dataset.term]; if (!d) return;
+    tip.innerHTML = '';
+    const h = document.createElement('strong'); h.textContent = d[0]; tip.appendChild(h);
+    tip.appendChild(document.createTextNode(d[1]));
+    if (d[2]) { const f = document.createElement('span'); f.className = 'f'; f.textContent = d[2]; tip.appendChild(f); }
+    tip.hidden = false;
+    const r = el.getBoundingClientRect(), tw = tip.offsetWidth, th = tip.offsetHeight;
+    let left = Math.min(Math.max(16, r.left), window.innerWidth - tw - 16);
+    let top = r.bottom + 8;
+    if (top + th > window.innerHeight - 8) top = r.top - th - 8;
+    tip.style.left = left + 'px'; tip.style.top = Math.max(8, top) + 'px';
+    current = el;
+  }
+  function hide(){ tip.hidden = true; current = null; }
+  document.querySelectorAll('.term').forEach(el => {
+    el.setAttribute('aria-describedby','tip');
+    el.addEventListener('mouseenter', () => show(el));
+    el.addEventListener('mouseleave', hide);
+    el.addEventListener('focus', () => show(el));
+    el.addEventListener('blur', hide);
+    el.addEventListener('click', e => { e.preventDefault(); e.stopPropagation(); current === el ? hide() : show(el); });
+  });
+  document.addEventListener('click', hide);
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') hide(); });
+  window.addEventListener('scroll', hide, {passive:true});
 })();
 </script>
 </body>
