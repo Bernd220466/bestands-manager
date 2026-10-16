@@ -9,7 +9,7 @@
 <meta name="theme-color" content="#0F1E38">
 <link rel="canonical" href="https://bestands-manager.com/rechner.html">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Was kostet Ihr Lager wirklich? · Lagerkosten-Rechner">
+<meta property="og:title" content="Was kostet Ihr Bestand wirklich? · Lagerkosten-Rechner">
 <meta property="og:description" content="Fünf Zahlen aus Bilanz und GuV, sofortiges Ergebnis. Kostenlos, ohne Anmeldung, Ihre Daten bleiben in Ihrem Browser.">
 <meta property="og:url" content="https://bestands-manager.com/rechner.html">
 <meta property="og:locale" content="de_DE">
@@ -98,8 +98,8 @@ table.sens tr.active td{font-weight:700;color:var(--orange-ink)}
     </nav>
     <div class="calc-hero">
       <p class="eyebrow" style="color:var(--orange)">Kostenloser Rechner für Händler</p>
-      <h1 style="margin-top:12px">Was kostet Ihr Lager <em>wirklich?</em></h1>
-      <p class="lead">Fünf Zahlen aus Ihrem Jahresabschluss genügen. Sie sehen sofort, wie viel Geld im Lager gebunden ist, was es Sie jedes Jahr kostet und was ein schlankerer Bestand für Ihre Rendite bedeutet.</p>
+      <h1 style="margin-top:12px">Was kostet Ihr Bestand <em>wirklich?</em></h1>
+      <p class="lead">Fünf Zahlen aus Ihrem Jahresabschluss genügen. Sie sehen sofort, wie viel Geld in Ihrer Ware gebunden ist, was dieser Bestand Sie jedes Jahr kostet und was ein schlankerer Bestand für Ihre Rendite bedeutet.</p>
       <p class="badges"><span>ohne Anmeldung</span><span>Ergebnis sofort</span><span>Ihre Zahlen bleiben in Ihrem Browser</span></p>
     </div>
   </div>
@@ -139,7 +139,7 @@ table.sens tr.active td{font-weight:700;color:var(--orange-ink)}
         <p class="group-title">Ihre Annahmen</p>
         <div class="field">
           <label for="kostensatz">Lagerhaltungskostensatz pro Jahr</label>
-          <span class="where">Zinsen auf das gebundene Kapital, Lagerfläche, Personal, Versicherung, Schwund und Veralterung. Im Handel liegt er oft zwischen 15 und 30 %.</span>
+          <span class="where">Kosten pro Jahr in Prozent des Bestandswerts: Zinsen auf das gebundene Kapital, Schwund, Veralterung sowie mengenabhängige Kosten für Fläche, Personal und Versicherung. Im Handel liegt er oft zwischen 15 und 30 %.</span>
           <div class="range-row"><input type="range" id="kostensatz" min="5" max="40" step="1" value="20"><output id="kostensatzOut" for="kostensatz">20 %</output></div>
         </div>
         <div class="field">
@@ -152,7 +152,7 @@ table.sens tr.active td{font-weight:700;color:var(--orange-ink)}
 
       <div class="results" aria-live="polite">
         <div class="headline-result">
-          <span class="lbl">Ihr Lager kostet Sie pro Jahr etwa</span>
+          <span class="lbl">Ihr Lagerbestand kostet Sie pro Jahr etwa</span>
           <span class="big" id="rKosten">–</span>
           <p id="rKostenText">–</p>
         </div>
@@ -200,7 +200,7 @@ table.sens tr.active td{font-weight:700;color:var(--orange-ink)}
         </div>
         <div>
           <h3>Lagerhaltungskosten</h3>
-          <p>Was das Lager jedes Jahr kostet, auch wenn es auf keiner Rechnung so steht: Zinsen, Fläche, Personal, Schwund.</p>
+          <p>Was der Bestand jedes Jahr kostet, auch wenn es auf keiner Rechnung so steht: Zinsen auf das gebundene Kapital, Schwund, Veralterung und der Teil von Fläche und Personal, der mit der Menge wächst. Fixkosten wie die Lagermiete sind nicht gemeint.</p>
           <p class="formula">Vorräte × Kostensatz</p>
         </div>
         <div>
