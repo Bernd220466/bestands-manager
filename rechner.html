@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Kostenloser Lagerkosten-Rechner für Händler: Mit fünf Zahlen aus Bilanz und GuV sehen Sie Kapitalbindung, Lagerkosten, freisetzbare Liquidität und die Wirkung auf Ihre Kapitalrendite.">
+<title>Lagerkosten-Rechner · Bestands-Manager.com</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#0F1E38">
+<link rel="canonical" href="https://bestands-manager.com/rechner.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Was kostet Ihr Lager wirklich? · Lagerkosten-Rechner">
+<meta property="og:description" content="Fünf Zahlen aus Bilanz und GuV, sofortiges Ergebnis. Kostenlos, ohne Anmeldung, Ihre Daten bleiben in Ihrem Browser.">
+<meta property="og:url" content="https://bestands-manager.com/rechner.html">
+<meta property="og:locale" content="de_DE">
+<link rel="stylesheet" href="styles.css">
+<style>
+/* Rechner-Seite: Eingaben links wie ein Formular, Ergebnis rechts wie ein Kontoauszug. */
+.calc-hero{padding-block:40px 56px}
+.calc-hero h1{font-size:clamp(2.6rem,6.5vw,4.4rem);color:var(--on-navy)}
+.calc-hero h1 em{font-style:normal;color:var(--orange)}
+.calc-hero .lead{color:var(--on-navy-muted);font-size:1.15rem;max-width:58ch;margin-top:18px}
+.calc-hero .badges{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:20px;color:var(--on-navy-muted);font-size:.95rem}
+.calc-hero .badges span::before{content:"✓ ";color:var(--orange);font-weight:700}
+
+.calc{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:32px;align-items:start}
+.inputs{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:24px;display:grid;gap:18px}
+.inputs h2{font-size:1.7rem}
+.group-title{font-weight:700;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--orange-ink);margin-top:6px}
+.field{display:grid;gap:4px}
+.field label{font-weight:600}
+.field .where{font-size:.85rem;color:var(--muted)}
+.input-wrap{display:flex;align-items:center;border:1px solid var(--line);border-radius:6px;background:var(--bg);overflow:hidden}
+.input-wrap:focus-within{border-color:var(--orange);outline:2px solid var(--orange-soft)}
+.input-wrap input{flex:1;min-width:0;border:0;background:transparent;font:600 1.1rem var(--body);color:var(--ink);padding:.6em .8em;font-variant-numeric:tabular-nums;text-align:right}
+.input-wrap input:focus{outline:none}
+.input-wrap .unit{padding:0 .8em;color:var(--muted);font-weight:600;border-left:1px solid var(--line);align-self:stretch;display:flex;align-items:center;background:var(--surface)}
+.range-row{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center}
+.range-row input[type=range]{width:100%;accent-color:var(--orange)}
+.range-row output{font:700 1.1rem var(--body);font-variant-numeric:tabular-nums;min-width:4ch;text-align:right}
+.reset{justify-self:start;background:none;border:0;color:var(--orange-ink);font:600 .95rem var(--body);cursor:pointer;padding:0;text-decoration:underline}
+
+.results{display:grid;gap:16px;position:sticky;top:calc(env(safe-area-inset-top,0px) + 16px)}
+.headline-result{background:var(--navy);color:var(--on-navy);border-radius:6px;padding:24px;display:grid;gap:6px}
+.headline-result .lbl{color:var(--on-navy-muted);font-weight:600}
+.headline-result .big{font-family:var(--display);font-size:clamp(2.6rem,6vw,3.6rem);line-height:1;color:var(--orange);font-variant-numeric:tabular-nums}
+.headline-result p{color:var(--on-navy-muted)}
+.kpis{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.kpi{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:16px;display:grid;gap:4px;min-width:0}
+.kpi .lbl{font-size:.9rem;color:var(--muted);font-weight:600}
+.kpi .val{font-family:var(--display);font-size:1.9rem;line-height:1.1;font-variant-numeric:tabular-nums}
+.kpi .sub{font-size:.85rem;color:var(--muted)}
+
+.compare{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:20px;display:grid;gap:14px}
+.compare h3{font-size:1.35rem}
+.bar-row{display:grid;grid-template-columns:7.5em minmax(0,1fr) 7em;gap:10px;align-items:center;font-size:.95rem}
+.bar-row .track{height:14px;background:var(--line);border-radius:2px;overflow:hidden}
+.bar-row .fill{height:100%;background:var(--muted);transition:width .3s}
+.bar-row.after .fill{background:var(--orange)}
+.bar-row .num{text-align:right;font-weight:700;font-variant-numeric:tabular-nums}
+.bar-row .name{color:var(--muted);font-weight:600}
+
+table.sens{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;font-size:.95rem}
+table.sens th,table.sens td{padding:8px 6px;border-bottom:1px solid var(--line);text-align:right}
+table.sens th:first-child,table.sens td:first-child{text-align:left}
+table.sens thead th{color:var(--muted);font-size:.85rem;font-weight:600}
+table.sens tr.active td{font-weight:700;color:var(--orange-ink)}
+.table-wrap{overflow-x:auto}
+
+.explain{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.explain div{display:grid;gap:8px;border-top:3px solid var(--orange);padding-top:16px;min-width:0}
+.explain p{color:var(--muted)}
+.formula{font-variant-numeric:tabular-nums;background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:10px 12px;font-size:.92rem;color:var(--ink)}
+.note{font-size:.88rem;color:var(--muted);max-width:75ch}
+
+@media (max-width:900px){
+  .calc{grid-template-columns:1fr}
+  .results{position:static}
+  .explain{grid-template-columns:1fr}
+}
+@media (max-width:480px){
+  .kpis{grid-template-columns:1fr}
+  .bar-row{grid-template-columns:5.5em minmax(0,1fr) 6.5em}
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <nav class="nav" aria-label="Hauptnavigation">
+      <a class="logo" href="index.html">Bestands-Manager<span>.com</span></a>
+      <ul>
+        <li><a href="index.html#check">Gratis-Check</a></li>
+        <li><a href="rechner.html" aria-current="page">Lagerkosten-Rechner</a></li>
+        <li><a href="index.html#angebot">Angebot</a></li>
+        <li><a href="index.html#ueber">Über mich</a></li>
+      </ul>
+    </nav>
+    <div class="calc-hero">
+      <p class="eyebrow" style="color:var(--orange)">Kostenloser Rechner für Händler</p>
+      <h1 style="margin-top:12px">Was kostet Ihr Lager <em>wirklich?</em></h1>
+      <p class="lead">Fünf Zahlen aus Ihrem Jahresabschluss genügen. Sie sehen sofort, wie viel Geld im Lager gebunden ist, was es Sie jedes Jahr kostet und was ein schlankerer Bestand für Ihre Rendite bedeutet.</p>
+      <p class="badges"><span>ohne Anmeldung</span><span>Ergebnis sofort</span><span>Ihre Zahlen bleiben in Ihrem Browser</span></p>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section style="padding-top:48px">
+    <div class="wrap calc">
+      <form class="inputs" id="calc" novalidate>
+        <h2>Ihre Zahlen</h2>
+        <p class="small">Eingetragen ist ein Beispiel-Händler. Ersetzen Sie die Werte durch Ihre eigenen.</p>
+
+        <p class="group-title">Aus der Bilanz</p>
+        <div class="field">
+          <label for="vorraete">Vorräte (Lagerbestand)</label>
+          <span class="where">Aktiva, Position B.I „Vorräte“. Am besten der Durchschnitt aus Anfangs- und Endbestand.</span>
+          <div class="input-wrap"><input id="vorraete" inputmode="numeric" value="1.800.000" aria-describedby="u1"><span class="unit" id="u1">€</span></div>
+        </div>
+        <div class="field">
+          <label for="bilanzsumme">Bilanzsumme</label>
+          <span class="where">Summe der Aktiva bzw. Passiva.</span>
+          <div class="input-wrap"><input id="bilanzsumme" inputmode="numeric" value="4.500.000"><span class="unit">€</span></div>
+        </div>
+
+        <p class="group-title">Aus der Gewinn- und Verlustrechnung</p>
+        <div class="field">
+          <label for="wareneinsatz">Wareneinsatz</label>
+          <span class="where">Materialaufwand bzw. Aufwand für bezogene Waren (GuV, Position 5).</span>
+          <div class="input-wrap"><input id="wareneinsatz" inputmode="numeric" value="5.600.000"><span class="unit">€</span></div>
+        </div>
+        <div class="field">
+          <label for="ergebnis">Jahresüberschuss</label>
+          <span class="where">GuV, Position 17. Bei einem Verlust mit Minus eintragen.</span>
+          <div class="input-wrap"><input id="ergebnis" inputmode="numeric" value="240.000"><span class="unit">€</span></div>
+        </div>
+
+        <p class="group-title">Ihre Annahmen</p>
+        <div class="field">
+          <label for="kostensatz">Lagerhaltungskostensatz pro Jahr</label>
+          <span class="where">Zinsen auf das gebundene Kapital, Lagerfläche, Personal, Versicherung, Schwund und Veralterung. Im Handel liegt er oft zwischen 15 und 30 %.</span>
+          <div class="range-row"><input type="range" id="kostensatz" min="5" max="40" step="1" value="20"><output id="kostensatzOut" for="kostensatz">20 %</output></div>
+        </div>
+        <div class="field">
+          <label for="reduktion">Ziel: Bestand senken um</label>
+          <span class="where">Bei gleicher Lieferfähigkeit. 15 bis 25 % sind in vielen Lagern ein realistischer Startwert.</span>
+          <div class="range-row"><input type="range" id="reduktion" min="5" max="50" step="1" value="20"><output id="reduktionOut" for="reduktion">20 %</output></div>
+        </div>
+        <button type="button" class="reset" id="reset">Beispielwerte wiederherstellen</button>
+      </form>
+
+      <div class="results" aria-live="polite">
+        <div class="headline-result">
+          <span class="lbl">Ihr Lager kostet Sie pro Jahr etwa</span>
+          <span class="big" id="rKosten">–</span>
+          <p id="rKostenText">–</p>
+        </div>
+
+        <div class="kpis">
+          <div class="kpi"><span class="lbl">Freisetzbare Liquidität</span><span class="val" id="rLiqui">–</span><span class="sub">einmalig, durch weniger Bestand</span></div>
+          <div class="kpi"><span class="lbl">Einsparung pro Jahr</span><span class="val" id="rSpar">–</span><span class="sub">weniger Lagerhaltungskosten</span></div>
+          <div class="kpi"><span class="lbl">Lagerumschlag</span><span class="val" id="rUmschlag">–</span><span class="sub" id="rUmschlagSub">–</span></div>
+          <div class="kpi"><span class="lbl">Lagerreichweite</span><span class="val" id="rReichweite">–</span><span class="sub" id="rReichweiteSub">–</span></div>
+        </div>
+
+        <div class="compare">
+          <h3>Gesamtkapitalrendite vorher und nachher</h3>
+          <div class="bar-row"><span class="name">Heute</span><div class="track"><div class="fill" id="bVor"></div></div><span class="num" id="rRoiVor">–</span></div>
+          <div class="bar-row after"><span class="name">Mit Ziel</span><div class="track"><div class="fill" id="bNach"></div></div><span class="num" id="rRoiNach">–</span></div>
+          <p class="note" id="rRoiText">–</p>
+        </div>
+
+        <div class="compare">
+          <h3>Was bringt welches Ziel?</h3>
+          <div class="table-wrap">
+            <table class="sens">
+              <thead><tr><th>Bestand senken um</th><th>Liquidität frei</th><th>Einsparung / Jahr</th><th>Kapitalrendite</th></tr></thead>
+              <tbody id="sensBody"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <a class="btn btn-primary" href="https://calendly.com/berndspricht/bestands-manager-lager-leicht-optimieren-45-min" target="_blank" rel="noopener" style="justify-self:start">Ergebnis im Gespräch prüfen lassen (45 Min., kostenlos)</a>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--surface);border-block:1px solid var(--line)">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">So rechnet der Rechner</p>
+        <h2>Drei Kennzahlen, kein Geheimnis</h2>
+      </div>
+      <div class="explain">
+        <div>
+          <h3>Lagerumschlag</h3>
+          <p>Wie oft sich Ihr Bestand im Jahr komplett erneuert. Je höher, desto weniger Geld liegt im Regal.</p>
+          <p class="formula">Wareneinsatz ÷ Vorräte</p>
+        </div>
+        <div>
+          <h3>Lagerhaltungskosten</h3>
+          <p>Was das Lager jedes Jahr kostet, auch wenn es auf keiner Rechnung so steht: Zinsen, Fläche, Personal, Schwund.</p>
+          <p class="formula">Vorräte × Kostensatz</p>
+        </div>
+        <div>
+          <h3>Gesamtkapitalrendite</h3>
+          <p>Wie gut Ihr eingesetztes Kapital arbeitet. Weniger Bestand senkt das gebundene Kapital und die Kosten zugleich.</p>
+          <p class="formula">Jahresüberschuss ÷ Bilanzsumme</p>
+        </div>
+      </div>
+      <p class="note" style="margin-top:28px">Hinweis: Der Rechner liefert eine vereinfachte Schätzung und ersetzt keine Analyse. Die Einsparung ist vor Steuern gerechnet. Für die Rendite nach dem Ziel wird angenommen, dass die frei werdende Liquidität die Bilanzsumme verringert, zum Beispiel durch die Tilgung von Krediten. Die Zinsen auf das gebundene Kapital sind im Kostensatz enthalten. Ihre Eingaben werden nicht gespeichert und nicht übertragen.</p>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="wrap">
+      <p class="eyebrow" style="color:var(--orange)">Vom Rechner zur echten Zahl</p>
+      <h2>Wo genau steckt das Geld in Ihrem Lager?</h2>
+      <p>Der Rechner zeigt die Größenordnung. Die Bestandsanalyse zeigt, welche Artikel es sind und was Sie konkret tun können.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:12px">
+        <a class="btn btn-primary" href="https://calendly.com/berndspricht/bestands-manager-lager-leicht-optimieren-45-min" target="_blank" rel="noopener">Kostenloses Gespräch buchen</a>
+        <a class="btn btn-ghost" href="index.html#angebot">Zur Bestandsanalyse</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <strong>Bestands-Manager.com</strong><br>
+      Bernd Schäfer · Thomas-Mann-Straße 12 · 67574 Osthofen<br>
+      Telefon <span class="copy">0177 7999365</span> · E-Mail <span class="copy">info@bestands-manager.com</span>
+    </div>
+    <div><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const DEFAULTS = {vorraete:1800000, bilanzsumme:4500000, wareneinsatz:5600000, ergebnis:240000, kostensatz:20, reduktion:20};
+  const eur0 = new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR',maximumFractionDigits:0});
+  const num0 = new Intl.NumberFormat('de-DE',{maximumFractionDigits:0});
+  const num1 = new Intl.NumberFormat('de-DE',{minimumFractionDigits:1,maximumFractionDigits:1});
+  const pct1 = v => num1.format(v*100) + ' %';
+  const $ = id => document.getElementById(id);
+  const moneyIds = ['vorraete','bilanzsumme','wareneinsatz','ergebnis'];
+
+  function parse(str){
+    const s = String(str).replace(/\s|€/g,'').replace(/\./g,'').replace(',', '.');
+    const n = parseFloat(s);
+    return isFinite(n) ? n : NaN;
+  }
+  function short(v){
+    const a = Math.abs(v);
+    if (a >= 1e6) return num1.format(v/1e6) + ' Mio. €';
+    if (a >= 1e4) return num0.format(Math.round(v/1000)) + ' T€';
+    return eur0.format(v);
+  }
+
+  function compute(v, red){
+    const umschlag = v.wareneinsatz / v.vorraete;
+    const reichweite = 365 / umschlag;
+    const kosten = v.vorraete * v.kostensatz/100;
+    const liqui = v.vorraete * red/100;
+    const spar = liqui * v.kostensatz/100;
+    const roiVor = v.ergebnis / v.bilanzsumme;
+    const roiNach = (v.ergebnis + spar) / (v.bilanzsumme - liqui);
+    return {umschlag, reichweite, kosten, liqui, spar, roiVor, roiNach,
+            umschlagNach: v.wareneinsatz/(v.vorraete-liqui), reichweiteNach: 365*(v.vorraete-liqui)/v.wareneinsatz};
+  }
+
+  function render(){
+    const v = {};
+    let ok = true;
+    moneyIds.forEach(id => { v[id] = parse($(id).value); const bad = !isFinite(v[id]) || (id!=='ergebnis' && v[id] <= 0); $(id).parentElement.style.borderColor = bad ? 'var(--bad)' : ''; if (bad) ok = false; });
+    v.kostensatz = +$('kostensatz').value; v.reduktion = +$('reduktion').value;
+    $('kostensatzOut').value = v.kostensatz + ' %';
+    $('reduktionOut').value = v.reduktion + ' %';
+    if (ok && v.vorraete >= v.bilanzsumme) ok = false;
+    if (!ok){
+      ['rKosten','rLiqui','rSpar','rUmschlag','rReichweite','rRoiVor','rRoiNach'].forEach(id => $(id).textContent = '–');
+      $('rKostenText').textContent = 'Bitte prüfen Sie die Eingaben: Alle Beträge müssen größer als null sein, und die Vorräte müssen kleiner als die Bilanzsumme sein.';
+      $('rUmschlagSub').textContent = $('rReichweiteSub').textContent = $('rRoiText').textContent = '';
+      $('sensBody').innerHTML = '';
+      return;
+    }
+    const r = compute(v, v.reduktion);
+    $('rKosten').textContent = eur0.format(r.kosten);
+    $('rKostenText').textContent = `Das sind ${num1.format(r.kosten / Math.max(v.wareneinsatz,1) * 100)} % Ihres Wareneinsatzes. Bei ${v.kostensatz} % Kostensatz auf ${short(v.vorraete)} Vorräte.`;
+    $('rLiqui').textContent = short(r.liqui);
+    $('rSpar').textContent = short(r.spar);
+    $('rUmschlag').textContent = num1.format(r.umschlag) + '×';
+    $('rUmschlagSub').textContent = `pro Jahr, mit Ziel ${num1.format(r.umschlagNach)}×`;
+    $('rReichweite').textContent = num0.format(r.reichweite) + ' Tage';
+    $('rReichweiteSub').textContent = `mit Ziel ${num0.format(r.reichweiteNach)} Tage`;
+    $('rRoiVor').textContent = pct1(r.roiVor);
+    $('rRoiNach').textContent = pct1(r.roiNach);
+    const maxRoi = Math.max(r.roiVor, r.roiNach, 0.0001);
+    $('bVor').style.width = Math.max(0, r.roiVor/maxRoi*100) + '%';
+    $('bNach').style.width = Math.max(0, r.roiNach/maxRoi*100) + '%';
+    const diff = (r.roiNach - r.roiVor) * 100;
+    $('rRoiText').textContent = `Plus ${num1.format(diff)} Prozentpunkte: ${short(r.spar)} weniger Kosten im Jahr und ${short(r.liqui)} weniger gebundenes Kapital.`;
+    const steps = [10, 20, 30, 40];
+    if (!steps.includes(v.reduktion)) steps.push(v.reduktion);
+    steps.sort((a,b)=>a-b);
+    $('sensBody').innerHTML = steps.map(p => { const s = compute(v,p); return `<tr class="${p===v.reduktion?'active':''}"><td>${p} %</td><td>${short(s.liqui)}</td><td>${short(s.spar)}</td><td>${pct1(s.roiNach)}</td></tr>`; }).join('');
+  }
+
+  function formatField(e){
+    const n = parse(e.target.value);
+    if (isFinite(n)) e.target.value = num0.format(n);
+  }
+  moneyIds.forEach(id => { $(id).addEventListener('input', render); $(id).addEventListener('blur', formatField); });
+  ['kostensatz','reduktion'].forEach(id => $(id).addEventListener('input', render));
+  $('reset').addEventListener('click', () => {
+    moneyIds.forEach(id => $(id).value = num0.format(DEFAULTS[id]));
+    $('kostensatz').value = DEFAULTS.kostensatz; $('reduktion').value = DEFAULTS.reduktion;
+    render();
+  });
+  $('calc').addEventListener('submit', e => e.preventDefault());
+  render();
+})();
+</script>
+</body>
+</html>
