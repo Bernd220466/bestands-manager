@@ -244,7 +244,7 @@ function update(){
   const v=document.getElementById("verdict"), a=document.getElementById("advice");
   v.className="verdict";
   if(answered<QUESTIONS.length){v.textContent=`${answered} von 10 Fragen beantwortet.`;a.textContent="Beantworten Sie alle Fragen für eine Einschätzung.";m.style.background="var(--muted)";return;}
-  if(sum>=15){v.textContent="Gut aufgestellt.";v.classList.add("good");m.style.background="var(--good)";a.textContent="Ihr Lager ist im Griff. Mit den Excel-Vorlagen und dem monatlichen Report halten Sie das Niveau mit wenig Aufwand.";}
+  if(sum>=15){v.textContent="Gut aufgestellt.";v.classList.add("good");m.style.background="var(--good)";a.textContent="Ihr Lager ist im Griff. Mit den Vorlagen und dem monatlichen Bestands-Cockpit halten Sie das Niveau mit wenig Aufwand.";}
   else if(sum>=8){v.textContent="Solide Basis mit Lücken.";v.classList.add("warn");m.style.background="var(--warn)";a.textContent="In den Bereichen mit „Teilweise“ und „Nein“ steckt meist gebundenes Kapital. Eine Bestandsanalyse zeigt, wie viel.";}
   else{v.textContent="Hier liegt viel Geld im Lager.";v.classList.add("bad");m.style.background="var(--bad)";a.textContent="Viele Grundlagen fehlen noch. Das ist die beste Ausgangslage: Hier bringt eine Analyse am schnellsten Ergebnisse. Buchen Sie ein kostenloses Gespräch.";}
 }
