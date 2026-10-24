@@ -158,3 +158,9 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:16px 40px;justify-content:space-bet
 .legal .small{color:var(--muted)}
 .subnav{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:18px}
 .subnav a.back{color:var(--on-navy-muted);font-weight:600;text-decoration:none}
+
+.gratis{display:grid;gap:32px;grid-template-columns:1fr;align-items:start}
+@media (min-width:880px){.gratis{grid-template-columns:1fr 1fr}}
+.gratis h2{font-size:clamp(2rem,4.5vw,2.8rem);margin:6px 0 12px}
+.gratis-list{padding-left:1.2em;margin:14px 0 0}
+.gratis-form{background:#fff;border:1px solid var(--line);border-radius:12px;padding:8px}
