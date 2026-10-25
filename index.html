@@ -87,12 +87,10 @@
           <div class="meter"><i id="meter"></i></div>
           <p class="verdict" id="verdict">Noch keine Antworten.</p>
           <p class="small" id="advice">Beantworten Sie alle 10 Fragen für eine Einschätzung.</p>
-          <form class="lead" id="leadform" novalidate>
-            <label for="lead-email">E-Book „100 Tipps für weniger Bestand“ gratis anfordern</label>
-            <input id="lead-email" type="email" placeholder="name@firma.de" autocomplete="email" required>
-            <button class="btn btn-primary" type="submit">E-Book anfordern</button>
-            <p class="small" id="leadmsg">Kein Spam. Abmeldung jederzeit möglich.</p>
-          </form>
+          <div class="lead" style="display:grid;gap:10px;margin-top:16px">
+            <p><strong>Ihr nächster Schritt:</strong> Das Gratis-Excel „Lagertransparenz“ zeigt Ihnen in 10 Minuten, wo Ihr Kapital liegt.</p>
+            <a class="btn btn-primary" href="#gratis">Zum Gratis-Excel</a>
+          </div>
         </div>
       </div>
     </div>
@@ -267,12 +265,6 @@ function update(){
   else{v.textContent="Hier liegt viel Geld im Lager.";v.classList.add("bad");m.style.background="var(--bad)";a.textContent="Viele Grundlagen fehlen noch. Das ist die beste Ausgangslage: Hier bringt eine Analyse am schnellsten Ergebnisse. Buchen Sie ein kostenloses Gespräch.";}
 }
 list.addEventListener("change", update);
-document.getElementById("leadform").addEventListener("submit", e=>{
-  e.preventDefault();
-  const email=document.getElementById("lead-email"), msg=document.getElementById("leadmsg");
-  if(!email.checkValidity()){msg.textContent="Bitte eine gültige E-Mail-Adresse eingeben."; email.focus(); return;}
-  msg.textContent="Das Anmeldeformular wird gerade eingerichtet. Schreiben Sie bis dahin an info@bestands-manager.com, dann schicke ich Ihnen das E-Book.";
-});
 </script>
 
 </body>
