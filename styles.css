@@ -104,7 +104,7 @@ form.lead input[type=email],form.lead input[type=text]{font:inherit;padding:.6em
 .offer.main{border:2px solid var(--orange)}
 .price{font-family:var(--mono);font-size:1.35rem}
 .price small{font-size:.8rem;color:var(--muted)}
-.offer ul{margin:0;padding-left:1.1em;color:var(--muted);font-size:.95rem;display:grid;gap:4px}
+.offer ul{margin:0;padding-left:1.1em;color:var(--muted);font-size:.95rem;display:grid;gap:4px;align-content:start}
 .tag{font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--orange-ink)}
 .guarantee{margin-top:20px;background:var(--orange-soft);border-radius:6px;padding:16px 20px;font-weight:600}
 
