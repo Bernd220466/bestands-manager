@@ -51,6 +51,8 @@ section{padding-block:72px}
 .nav{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;padding-block:18px}
 .logo{font-family:var(--display);font-size:1.6rem;font-weight:700;color:var(--on-navy);text-decoration:none;letter-spacing:.02em}
 .logo span{color:var(--orange)}
+.logo{display:inline-flex;align-items:center}
+.logo-mark{width:1.45em;height:1.45em;flex:none;margin-right:.4em;color:var(--on-navy)}
 .nav ul{display:flex;flex-wrap:wrap;gap:6px 22px;list-style:none;margin:0;padding:0}
 .nav a{color:var(--on-navy-muted);text-decoration:none;font-weight:600}
 .nav a:hover,.nav a.logo{color:var(--on-navy)}
