@@ -166,3 +166,8 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:16px 40px;justify-content:space-bet
 .gratis h2{font-size:clamp(2rem,4.5vw,2.8rem);margin:6px 0 12px}
 .gratis-list{padding-left:1.2em;margin:14px 0 0}
 .gratis-form{background:#fff;border:1px solid var(--line);border-radius:12px;padding:8px}
+.logo{white-space:nowrap}
+.subnav a.back{white-space:nowrap}
+@media (max-width:420px){.logo{font-size:1.3rem}.subnav a.back{font-size:.9rem}}
+.gratis-form iframe{height:520px}
+@media (max-width:560px){.gratis-form iframe{height:640px}}
