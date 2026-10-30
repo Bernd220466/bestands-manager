@@ -17,6 +17,9 @@
 .dl .box{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px 22px;margin-top:28px}
 .dl ol{padding-left:1.2em;margin:0}
 .dl li{margin:6px 0}
+.agree{display:grid;grid-template-columns:22px 1fr;gap:10px;margin:22px 0 0;align-items:start;cursor:pointer}
+.agree input{width:20px;height:20px;margin:2px 0 0;accent-color:var(--orange)}
+.dl .btn.off{opacity:.45;cursor:not-allowed}
 </style>
 </head>
 <body>
@@ -30,7 +33,14 @@
 <p class="eyebrow">Anmeldung bestätigt</p>
 <h1>Danke! Hier ist Ihre Lagertransparenz.</h1>
 <p>Die Excel-Datei zeigt in 10 Minuten, wo Ihr Kapital im Lager liegt: nach Warengruppe, Lagerort und ABC-Klasse.</p>
-<a class="btn" href="downloads/Lagertransparenz-Bestands-Manager.xlsx" download>Excel-Datei herunterladen</a>
+<label class="agree" for="nb-ok"><input type="checkbox" id="nb-ok"> <span>Ich habe die <a href="nutzungsbedingungen.html" target="_blank" rel="noopener">Nutzungsbedingungen</a> gelesen und akzeptiere sie. Die Datei ist eine Rechen- und Entscheidungshilfe für Unternehmen; ich prüfe die Ergebnisse selbst.</span></label>
+<a class="btn" id="dl-btn" href="downloads/Lagertransparenz-Bestands-Manager.xlsx" download aria-disabled="true">Excel-Datei herunterladen</a>
+<p class="small" id="dl-hint" style="color:var(--muted);margin:0">Bitte zuerst das Häkchen setzen.</p>
+<script>
+(function(){var c=document.getElementById('nb-ok'),b=document.getElementById('dl-btn'),h=document.getElementById('dl-hint');
+function u(){b.setAttribute('aria-disabled',c.checked?'false':'true');b.classList.toggle('off',!c.checked);h.hidden=c.checked;}
+b.addEventListener('click',function(e){if(!c.checked){e.preventDefault();c.focus();}});c.addEventListener('change',u);u();})();
+</script>
 <p class="small" style="color:var(--muted)">Den Link haben Sie zusätzlich per E-Mail erhalten.</p>
 <div class="box">
 <h2 style="font-size:1.5rem;margin:0 0 10px">So starten Sie</h2>
@@ -49,7 +59,7 @@
 <footer>
   <div class="wrap">
     <div><strong>Bestands-Manager.com</strong><br>Bernd Schäfer · Thomas-Mann-Straße 12 · 67574 Osthofen</div>
-    <div><a href="https://www.linkedin.com/in/bernd-schaefer-bestandsmanager" target="_blank" rel="noopener">LinkedIn</a> · <a href="glossar.html">Glossar</a> · <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></div>
+    <div><a href="https://www.linkedin.com/in/bernd-schaefer-bestandsmanager" target="_blank" rel="noopener">LinkedIn</a> · <a href="glossar.html">Glossar</a> · <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a> · <a href="nutzungsbedingungen.html">Nutzungsbedingungen</a></div>
   </div>
 </footer>
 </body>
