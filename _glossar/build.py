@@ -98,7 +98,7 @@ page=f'''<!doctype html>
 <section class="g-cta">
   <h2>Wie viel Geld steckt in Ihrem Lager?</h2>
   <p>Wenden Sie die Begriffe direkt auf Ihre Zahlen an – kostenlos und ohne Anmeldung.</p>
-  <a class="btn" href="rechner.html">Lagerkosten-Rechner</a><a class="btn ghost" href="index.html#check">Gratis-Bestands-Check</a>
+  <a class="btn" href="rechner.html">Lagerkosten-Rechner</a><a class="btn ghost" href="index.html#check">Lager-Selbsttest</a>
 </section>
 <p class="small" style="margin-top:24px;color:var(--muted)">Stand: Oktober 2026 · {len(T)} Begriffe · Alle Erklärungen sind eigene Texte von Bestands-Manager.com.</p>
 </main>
