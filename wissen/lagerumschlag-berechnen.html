@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lagerumschlag berechnen und verbessern: Formel und Beispiel · Bestands-Manager.com</title>
+<meta name="description" content="Wie berechnet man den Lagerumschlag, was sagt die Lagerdauer, und wie steigern Händler die Umschlagshäufigkeit? Formel, Rechenbeispiel und fünf Hebel.">
+<link rel="canonical" href="https://bestands-manager.com/wissen/lagerumschlag-berechnen.html">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<meta name="theme-color" content="#0F1E38">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Lagerumschlag berechnen und verbessern: Formel und Beispiel · Bestands-Manager.com">
+<meta property="og:description" content="Wie berechnet man den Lagerumschlag, was sagt die Lagerdauer, und wie steigern Händler die Umschlagshäufigkeit? Formel, Rechenbeispiel und fünf Hebel.">
+<meta property="og:url" content="https://bestands-manager.com/wissen/lagerumschlag-berechnen.html">
+<meta property="og:locale" content="de_DE">
+<meta property="og:site_name" content="Bestands-Manager.com">
+<meta property="og:image" content="https://bestands-manager.com/img/team-feiert-kennzahlen-1200-bestands-manager.com.webp">
+<meta property="og:image:alt" content="Zwei Kollegen klatschen sich vor einem Bildschirm mit steigenden Balken ab · Bestands-Manager.com">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../styles.css?v=20261101">
+<style>.pg{max-width:780px;margin:0 auto;padding-block:48px 80px}
+.pg h1{font-size:clamp(2rem,4.6vw,2.8rem);margin-bottom:12px;line-height:1.1}
+.pg h2{font-size:1.5rem;margin:36px 0 10px}
+.pg h3{font-size:1.15rem;margin:22px 0 6px}
+.pg p,.pg li{line-height:1.65}.pg p{margin:0 0 12px}
+.pg ul,.pg ol{padding-left:1.2em}.pg li{margin:5px 0}
+.meta{color:var(--muted);font-size:.92rem;margin-bottom:22px}
+.kurz{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--orange);border-radius:8px;padding:16px 20px;margin:18px 0 8px}
+.kurz b{display:block;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--orange);margin-bottom:4px}
+.kurz p{margin:0}
+.formel{font-family:"Barlow Condensed",sans-serif;font-size:1.35rem;background:var(--surface);border-radius:8px;padding:12px 16px;text-align:center;margin:12px 0}
+.pg table{width:100%;border-collapse:collapse;font-size:.95rem;margin:10px 0}
+.pg th{background:var(--navy,#0F1E38);color:#fff;text-align:left;padding:8px}
+.pg td{border-top:1px solid var(--line);padding:8px;vertical-align:top}
+.tw{overflow-x:auto}
+.fig{margin:22px 0}.fig img{width:100%;height:auto;display:block;border-radius:10px}
+.fig figcaption{font-size:.85rem;color:var(--muted);margin-top:6px}
+.cta{background:var(--navy,#0F1E38);color:#EEF2F8;border-radius:10px;padding:22px 24px;margin-top:36px}
+.cta h2{color:#fff;margin-top:0}.cta a:not(.btn){color:var(--orange)}.cta .btn{color:#fff}
+.cta .btn{margin-top:8px}
+.faq details{border-top:1px solid var(--line);padding:10px 0}.faq summary{font-weight:700;cursor:pointer}
+.mehr{display:grid;gap:10px;margin-top:10px}.mehr a{display:block;border:1px solid var(--line);border-radius:8px;padding:12px 14px;text-decoration:none}
+.list{display:grid;gap:14px;margin-top:20px}.list a{display:block;border:1px solid var(--line);border-radius:10px;padding:16px 18px;text-decoration:none;color:inherit}
+.list a b{display:block;font-size:1.15rem;margin-bottom:4px;color:var(--navy,#0F1E38)}
+.list a span{color:var(--muted)}</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Lagerumschlag berechnen und verbessern","description":"Wie berechnet man den Lagerumschlag, was sagt die Lagerdauer, und wie steigern Händler die Umschlagshäufigkeit? Formel, Rechenbeispiel und fünf Hebel.","image":"https://bestands-manager.com/img/team-feiert-kennzahlen-1200-bestands-manager.com.webp","author":{"@type":"Person","@id":"https://bestands-manager.com/#bernd","name":"Bernd Schäfer","url":"https://bestands-manager.com/#ueber","jobTitle":"Berater für Bestandsoptimierung im Handel"},"publisher":{"@type":"Organization","@id":"https://bestands-manager.com/#firma","name":"Bestands-Manager.com","logo":{"@type":"ImageObject","url":"https://bestands-manager.com/img/icon-512.png"}},"datePublished":"2026-11-01","dateModified":"2026-11-01","inLanguage":"de","mainEntityOfPage":"https://bestands-manager.com/wissen/lagerumschlag-berechnen.html","about":["Lagerumschlag","Lagerdauer","Wareneinsatz"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Wie berechnet man den Lagerumschlag?","acceptedAnswer":{"@type":"Answer","text":"Wareneinsatz pro Jahr geteilt durch den durchschnittlichen Lagerbestand, beides zu Einkaufspreisen. Beispiel: 4,2 Mio. € ÷ 1,2 Mio. € = 3,5."}},{"@type":"Question","name":"Was ist die Lagerdauer?","acceptedAnswer":{"@type":"Answer","text":"Die durchschnittliche Zahl der Tage, die Ware im Lager liegt: 365 geteilt durch den Lagerumschlag. Bei einem Umschlag von 3,5 sind es rund 104 Tage."}},{"@type":"Question","name":"Was ist ein guter Lagerumschlag im Handel?","acceptedAnswer":{"@type":"Answer","text":"Das hängt stark vom Sortiment ab. Aussagekräftiger als Branchenwerte ist der Vergleich mit dem eigenen Vorjahr und zwischen den Warengruppen."}},{"@type":"Question","name":"Wie erhöhe ich den Lagerumschlag?","acceptedAnswer":{"@type":"Answer","text":"Vor allem durch den Abbau von Überbestand und Ladenhütern, kleinere Bestellmengen und das Gegenrechnen von Mengenrabatten, ohne die Lieferfähigkeit der A-Artikel zu gefährden."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Start","item":"https://bestands-manager.com/"},{"@type":"ListItem","position":2,"name":"Wissen","item":"https://bestands-manager.com/wissen/"},{"@type":"ListItem","position":3,"name":"Lagerumschlag berechnen und verbessern","item":"https://bestands-manager.com/wissen/lagerumschlag-berechnen.html"}]}</script>
+</head>
+<body>
+<header class="top"><div class="wrap subnav"><a class="logo" href="../index.html"><svg class="logo-mark" aria-hidden="true" viewBox="0 0 64 64"><g transform="translate(0 -2)"><path d="M11.75 14 V47.5" stroke="currentColor" stroke-width="5.5" fill="none" stroke-linejoin="bevel"></path><path d="M13.5 16.75 H21 a6.75 6.75 0 0 1 0 13.5 H13.5" stroke="currentColor" stroke-width="5.5" fill="none" stroke-linejoin="bevel"></path><path d="M13.5 30.25 H22 a7.25 7.25 0 0 1 0 14.5 H13.5" stroke="currentColor" stroke-width="5.5" fill="none" stroke-linejoin="bevel"></path><path d="M37.75 47.5 V14 M53.25 14 V47.5" stroke="currentColor" stroke-width="5.5" fill="none" stroke-linejoin="bevel"></path><path d="M37.75 14 L45.5 37 L53.25 14" stroke="currentColor" stroke-width="5.5" fill="none" stroke-linejoin="bevel"></path></g><rect x="8" y="49" width="49" height="4.5" rx="1" fill="#E46F14"></rect></svg>Bestands-Manager<span>.com</span></a><a class="back" href="index.html">Alle Artikel</a></div></header>
+<main class="wrap pg">
+<p class="eyebrow">Wissen für Händler</p>
+<h1>Lagerumschlag berechnen und verbessern</h1>
+<p class="meta">Von Bernd Schäfer · Bestandsoptimierung für den Handel · Stand 1. November 2026</p>
+<div class="kurz"><b>Kurz gesagt</b><p>Lagerumschlag = Wareneinsatz pro Jahr ÷ durchschnittlicher Lagerbestand, beides zu Einkaufspreisen. Ein Umschlag von 3,5 heißt: Das Lager wird 3,5-mal im Jahr verkauft und ersetzt, ein Euro Ware liegt im Schnitt 104 Tage (365 ÷ 3,5). Was gut ist, hängt stark vom Sortiment ab. Vergleichen Sie sich vor allem mit dem eigenen Vorjahr. Steigern lässt sich der Umschlag vor allem durch den Abbau von Überbestand und Ladenhütern.</p></div>
+<figure class="fig"><img src="../img/team-feiert-kennzahlen-1200-bestands-manager.com.webp" srcset="../img/team-feiert-kennzahlen-720-bestands-manager.com.webp 720w, ../img/team-feiert-kennzahlen-1200-bestands-manager.com.webp 1200w" sizes="(max-width:820px) 100vw, 780px" width="1200" height="800" alt="Zwei Kollegen klatschen sich vor einem Bildschirm mit steigenden Balken ab"><figcaption>Zwei Kollegen klatschen sich vor einem Bildschirm mit steigenden Balken ab · KI-Bild · Bestands-Manager.com</figcaption></figure>
+<h2>Die Formel</h2>
+<div class="formel">Lagerumschlag = Wareneinsatz pro Jahr ÷ durchschnittlicher Lagerbestand</div>
+<p>Der <strong>Wareneinsatz</strong> ist das, was die verkaufte Ware Sie im Einkauf gekostet hat. Wichtig: Beide Werte zu Einkaufspreisen. Wer den Umsatz zu Verkaufspreisen durch den Bestand zu Einkaufspreisen teilt, rechnet sich den Umschlag schön.</p>
+<h2>Rechenbeispiel</h2>
+<div class="tw"><table><tr><th>Großhändler</th><th>Wert</th></tr>
+<tr><td>Wareneinsatz pro Jahr</td><td>4.200.000 €</td></tr>
+<tr><td>Durchschnittlicher Lagerbestand</td><td>1.200.000 €</td></tr>
+<tr><td><strong>Lagerumschlag</strong></td><td><strong>4.200.000 ÷ 1.200.000 = 3,5</strong></td></tr>
+<tr><td>Lagerdauer</td><td>365 ÷ 3,5 = 104 Tage</td></tr></table></div>
+<p>Das Lager wird 3,5-mal im Jahr komplett verkauft und ersetzt. Ein Euro Ware liegt im Durchschnitt 104 Tage, bevor er wieder hereinkommt.</p>
+<h2>Den Durchschnittsbestand richtig ermitteln</h2>
+<p>Ein einzelner Stichtag täuscht, etwa direkt vor der Saison oder nach der Inventur. Besser:</p>
+<ul>
+<li><strong>Einfach:</strong> (Anfangsbestand + Endbestand) ÷ 2</li>
+<li><strong>Genauer:</strong> (Anfangsbestand + 12 Monatsendbestände) ÷ 13</li>
+</ul>
+<h2>Was ist ein guter Lagerumschlag?</h2>
+<p>Darauf gibt es keine allgemeine Antwort. Ein Lebensmittelhändler dreht sein Lager viel öfter als ein Ersatzteilhändler mit 30.000 Artikeln. Vergleiche mit Branchenzahlen helfen deshalb wenig. Aussagekräftiger sind:</p>
+<ul>
+<li><strong>Der Vergleich mit dem Vorjahr.</strong> Steigt der Umschlag bei gleicher Lieferfähigkeit, sind Sie auf dem richtigen Weg.</li>
+<li><strong>Der Vergleich der Warengruppen.</strong> Wo dreht sich das Lager deutlich langsamer als im Rest? Dort liegt meist das gebundene Geld.</li>
+</ul>
+<h2>Was ein höherer Umschlag bringt</h2>
+<p>Steigt der Umschlag im Beispiel von 3,5 auf 4,0, sinkt der nötige Bestand bei gleichem Wareneinsatz von 1.200.000 € auf 1.050.000 €. 150.000 Euro sind frei, und bei 20 Prozent Lagerkostensatz sparen Sie rund 30.000 Euro im Jahr.</p>
+<h2>Fünf Hebel für mehr Umschlag</h2>
+<ol>
+<li><strong>Überbestand abbauen.</strong> Nachbestellung aussetzen, bis 90 Tage Reichweite erreicht sind.</li>
+<li><strong>Ladenhüter loswerden.</strong> Sie zählen voll zum Bestand und bringen keinen Wareneinsatz.</li>
+<li><strong>Bestellmengen prüfen.</strong> Kleinere Mengen öfter bestellen, wo Lieferant und Kosten es zulassen.</li>
+<li><strong>Rabattkäufe gegenrechnen.</strong> Ein Mengenrabatt lohnt nur, wenn er größer ist als die Lagerkosten für die längere Liegezeit.</li>
+<li><strong>Sortiment bereinigen.</strong> C-Artikel ohne strategische Bedeutung auslisten oder nur auf Bestellung führen.</li>
+</ol>
+<p>Achten Sie dabei auf die <strong>Lieferfähigkeit</strong>. Ein höherer Umschlag ist nur dann ein Erfolg, wenn die wichtigen A-Artikel weiter verfügbar sind.</p>
+<h2>Häufige Fragen</h2>
+<div class="faq"><details><summary>Wie berechnet man den Lagerumschlag?</summary><p>Wareneinsatz pro Jahr geteilt durch den durchschnittlichen Lagerbestand, beides zu Einkaufspreisen. Beispiel: 4,2 Mio. € ÷ 1,2 Mio. € = 3,5.</p></details><details><summary>Was ist die Lagerdauer?</summary><p>Die durchschnittliche Zahl der Tage, die Ware im Lager liegt: 365 geteilt durch den Lagerumschlag. Bei einem Umschlag von 3,5 sind es rund 104 Tage.</p></details><details><summary>Was ist ein guter Lagerumschlag im Handel?</summary><p>Das hängt stark vom Sortiment ab. Aussagekräftiger als Branchenwerte ist der Vergleich mit dem eigenen Vorjahr und zwischen den Warengruppen.</p></details><details><summary>Wie erhöhe ich den Lagerumschlag?</summary><p>Vor allem durch den Abbau von Überbestand und Ladenhütern, kleinere Bestellmengen und das Gegenrechnen von Mengenrabatten, ohne die Lieferfähigkeit der A-Artikel zu gefährden.</p></details></div>
+<div class="cta"><h2>Wie hoch ist Ihr Lagerumschlag?</h2><p>Der kostenlose Lagerkosten-Rechner zeigt Umschlag, Reichweite und Lagerkosten aus fünf Zahlen Ihres Jahresabschlusses. Ohne Anmeldung.</p><a class="btn btn-primary" href="../rechner.html">Zum Lagerkosten-Rechner</a></div>
+<h2>Weiterlesen</h2>
+<div class="mehr"><a href="ladenhueter-abbauen.html">Ladenhüter erkennen und abbauen</a><a href="ueberbestand-abbauen.html">Überbestand abbauen, ohne zu verramschen</a><a href="sicherheitsbestand-meldebestand-berechnen.html">Sicherheitsbestand und Meldebestand berechnen</a><a href="bestandsoptimierung-ohne-software.html">Bestände senken ohne neue Software: Wann Excel reicht und wann nicht</a><a href="lagerkosten-berechnen.html">Was kostet Lagerhaltung? Den Lagerhaltungskostensatz berechnen</a><a href="../glossar.html">Glossar: alle Fachbegriffe kurz erklärt</a></div>
+</main>
+<footer>
+  <div class="wrap">
+    <div><strong>Bestands-Manager.com</strong><br>Bernd Schäfer · Thomas-Mann-Straße 12 · 67574 Osthofen</div>
+    <div><a href="https://www.linkedin.com/in/bernd-schaefer-bestandsmanager" target="_blank" rel="noopener">LinkedIn</a> · <a href="../wissen/">Wissen</a> · <a href="../glossar.html">Glossar</a> · <a href="../impressum.html">Impressum</a> · <a href="../datenschutz.html">Datenschutz</a> · <a href="../nutzungsbedingungen.html">Nutzungsbedingungen</a></div>
+  </div>
+</footer>
+</body>
+</html>

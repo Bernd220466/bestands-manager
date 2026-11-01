@@ -151,3 +151,158 @@ ARTICLES = [
 'cta_h': 'Welche Ihrer A-Artikel sind zu knapp?', 'cta_p': 'Die Bestandsanalyse zeigt knappe A-Artikel mit dem Umsatz, der daran hängt, und gleichzeitig, wo zu viel liegt. Festpreis ab 490 €, mit Garantie.', 'cta_href': '../index.html#angebot', 'cta_btn': 'Bestandsanalyse ansehen',
 },
 ]
+
+ARTICLES += [
+{
+'slug': 'bestandsoptimierung-ohne-software',
+'title': 'Bestände senken ohne neue Software: Wann Excel reicht · Bestands-Manager.com',
+'h1': 'Bestände senken ohne neue Software: Wann Excel reicht und wann nicht',
+'desc': 'Brauchen Händler eine Software zur Bestandsoptimierung? Was Sie mit dem Export aus der Warenwirtschaft und Excel schaffen, woran Sie erkennen, dass sich Software lohnt, und was vor dem Kauf zu tun ist.',
+'date': '2026-11-01', 'date_de': '1. November 2026',
+'about': ['Bestandsoptimierung', 'Warenwirtschaftssystem', 'Software'],
+'img': 'team-plant-am-whiteboard', 'img_alt': 'Ein Team plant begeistert mit Haftnotizen am Whiteboard',
+'kurz': 'Für den Start brauchen die meisten Händler keine neue Software. Die Daten stehen schon in der Warenwirtschaft: Bestand, Einkaufspreis, Verkäufe, letzter Verkauf. Mit einem Export und Excel finden Sie Ladenhüter, Überbestand und knappe Artikel und können das meiste gebundene Kapital freisetzen. Software lohnt sich, wenn die Regeln klar sind und Sie sehr viele Artikel täglich automatisch disponieren wollen. Sie ersetzt aber keine Entscheidungen und keine sauberen Stammdaten.',
+'kurz_list': 'Was Sie mit Export und Excel schaffen, und ab wann Software sich lohnt.',
+'body': '''<h2>Die Daten haben Sie schon</h2>
+<p>Viele Händler glauben, für eine Bestandsanalyse bräuchten sie erst ein neues System. Doch Ihre <strong>Warenwirtschaft</strong> kennt jeden Artikel, jeden Bestand und jeden Verkauf. Sie müssen die Daten nur einmal als Liste herausholen, als <strong>Export</strong> nach Excel oder CSV. Fast jedes System kann das.</p>
+<p>Für den Anfang reichen diese Spalten:</p>
+<ul>
+<li>Artikelnummer und Bezeichnung</li>
+<li>Bestand in Stück und Einkaufspreis</li>
+<li>Verkaufte Menge der letzten 12 Monate, besser auch der 12 Monate davor</li>
+<li>Datum des letzten Verkaufs</li>
+<li>Lieferant und Lieferzeit, wenn vorhanden</li>
+</ul>
+<h2>Was Sie mit Excel schaffen</h2>
+<p>Mit diesen Daten lassen sich die vier wichtigsten Fragen beantworten:</p>
+<ol>
+<li><strong>Wo liegen Ladenhüter?</strong> Artikel ohne Verkauf seit 180 Tagen oder länger.</li>
+<li><strong>Wo liegt zu viel?</strong> Artikel mit mehr als 180 Tagen Reichweite. Alles über 90 Tage ist zu viel.</li>
+<li><strong>Wo droht eine Lücke?</strong> Artikel, deren Reichweite kürzer ist als die Lieferzeit plus eine Woche.</li>
+<li><strong>Welche Artikel sind wichtig?</strong> ABC-Analyse nach Umsatz oder Rohertrag.</li>
+</ol>
+<p>Das Geld kommt dann nicht aus der Software, sondern aus Entscheidungen: Bestellstopp, Rückgabe, Abverkauf, angepasste Meldebestände. Die sind in Excel genauso schnell getroffen.</p>
+<h2>Woran Sie erkennen, dass sich Software lohnt</h2>
+<p>Software zur Bestandsoptimierung kann sehr nützlich sein. Sie lohnt sich typischerweise, wenn mehreres davon zutrifft:</p>
+<ul>
+<li>Sie führen viele tausend aktive Artikel und disponieren täglich.</li>
+<li>Viele Artikel sind saisonal oder schwanken stark, und Sie wollen Prognosen statt Durchschnittswerten.</li>
+<li>Sie haben mehrere Standorte, zwischen denen umgelagert wird.</li>
+<li>Die Regeln sind klar und sollen laufend und automatisch angewendet werden.</li>
+<li>Ihre Stammdaten sind gepflegt: Lieferzeiten, Mindestmengen, Verpackungseinheiten.</li>
+</ul>
+<h2>Was vor jeder Software kommen sollte</h2>
+<ul>
+<li><strong>Ausgangswert messen.</strong> Bestandswert, Lagerumschlag, Ladenhüter-Anteil, Lieferfähigkeit. Sonst wissen Sie später nicht, was die Software gebracht hat.</li>
+<li><strong>Altlasten abbauen.</strong> Ein neues System übernimmt die alten Bestände. Besser, Sie ziehen mit einem aufgeräumten Lager um.</li>
+<li><strong>Regeln festlegen.</strong> Ab wann ist ein Artikel ein Ladenhüter, welche Ziel-Reichweite gilt, wie viel Puffer bekommen A-, B- und C-Artikel?</li>
+<li><strong>Stammdaten prüfen.</strong> Fehlende Einkaufspreise, falsche Lieferzeiten und doppelte Artikel machen jede Software ungenau.</li>
+<li><strong>Bestehende Funktionen nutzen.</strong> Viele Warenwirtschaften haben Meldebestand, Bestellsperre und Bestellvorschläge längst eingebaut. Sie werden nur nicht gepflegt.</li>
+</ul>
+<h2>Unabhängig beraten</h2>
+<p>Bestands-Manager.com verkauft keine Software und ist herstellerunabhängig. Die Bestandsanalyse arbeitet mit dem Export, den Ihre Warenwirtschaft schon liefert. Wenn sich danach zeigt, dass eine Software für Sie sinnvoll ist, wissen Sie genau, was sie können muss und welche Ausgangswerte sie verbessern soll.</p>''',
+'faq': [
+ ('Brauche ich eine Software, um Lagerbestände zu senken?', 'Für den Start meist nicht. Mit dem Export aus der Warenwirtschaft und Excel lassen sich Ladenhüter, Überbestand und knappe Artikel finden. Das Geld kommt aus den Entscheidungen, nicht aus dem Programm.'),
+ ('Wann lohnt sich Software zur Bestandsoptimierung?', 'Wenn Sie viele tausend Artikel täglich disponieren, viel Saisonware oder mehrere Standorte haben, die Regeln klar sind und die Stammdaten gepflegt sind.'),
+ ('Welche Daten brauche ich für eine Bestandsanalyse?', 'Artikelnummer, Bestand, Einkaufspreis, verkaufte Menge der letzten 12 Monate, Datum des letzten Verkaufs, dazu wenn möglich Lieferant und Lieferzeit.'),
+ ('Soll ich vor einem Systemwechsel die Bestände aufräumen?', 'Ja. Das neue System übernimmt die alten Bestände. Wer vorher Ladenhüter abbaut und Regeln festlegt, startet sauber und kann den Erfolg messen.'),
+],
+'cta_h': 'Erst messen, dann entscheiden', 'cta_p': 'Die Bestandsanalyse zeigt mit Ihrem vorhandenen Export, wie viel Kapital realistisch frei wird. Herstellerunabhängig, Festpreis ab 490 €, mit Garantie.', 'cta_href': '../index.html#angebot', 'cta_btn': 'Zur Bestandsanalyse',
+},
+{
+'slug': 'lagerumschlag-berechnen',
+'title': 'Lagerumschlag berechnen und verbessern: Formel und Beispiel · Bestands-Manager.com',
+'h1': 'Lagerumschlag berechnen und verbessern',
+'desc': 'Wie berechnet man den Lagerumschlag, was sagt die Lagerdauer, und wie steigern Händler die Umschlagshäufigkeit? Formel, Rechenbeispiel und fünf Hebel.',
+'date': '2026-11-01', 'date_de': '1. November 2026',
+'about': ['Lagerumschlag', 'Lagerdauer', 'Wareneinsatz'],
+'img': 'team-feiert-kennzahlen', 'img_alt': 'Zwei Kollegen klatschen sich vor einem Bildschirm mit steigenden Balken ab',
+'kurz': 'Lagerumschlag = Wareneinsatz pro Jahr ÷ durchschnittlicher Lagerbestand, beides zu Einkaufspreisen. Ein Umschlag von 3,5 heißt: Das Lager wird 3,5-mal im Jahr verkauft und ersetzt, ein Euro Ware liegt im Schnitt 104 Tage (365 ÷ 3,5). Was gut ist, hängt stark vom Sortiment ab. Vergleichen Sie sich vor allem mit dem eigenen Vorjahr. Steigern lässt sich der Umschlag vor allem durch den Abbau von Überbestand und Ladenhütern.',
+'kurz_list': 'Formel, Lagerdauer, Rechenbeispiel und fünf Hebel für mehr Umschlag.',
+'body': '''<h2>Die Formel</h2>
+<div class="formel">Lagerumschlag = Wareneinsatz pro Jahr ÷ durchschnittlicher Lagerbestand</div>
+<p>Der <strong>Wareneinsatz</strong> ist das, was die verkaufte Ware Sie im Einkauf gekostet hat. Wichtig: Beide Werte zu Einkaufspreisen. Wer den Umsatz zu Verkaufspreisen durch den Bestand zu Einkaufspreisen teilt, rechnet sich den Umschlag schön.</p>
+<h2>Rechenbeispiel</h2>
+<div class="tw"><table><tr><th>Großhändler</th><th>Wert</th></tr>
+<tr><td>Wareneinsatz pro Jahr</td><td>4.200.000 €</td></tr>
+<tr><td>Durchschnittlicher Lagerbestand</td><td>1.200.000 €</td></tr>
+<tr><td><strong>Lagerumschlag</strong></td><td><strong>4.200.000 ÷ 1.200.000 = 3,5</strong></td></tr>
+<tr><td>Lagerdauer</td><td>365 ÷ 3,5 = 104 Tage</td></tr></table></div>
+<p>Das Lager wird 3,5-mal im Jahr komplett verkauft und ersetzt. Ein Euro Ware liegt im Durchschnitt 104 Tage, bevor er wieder hereinkommt.</p>
+<h2>Den Durchschnittsbestand richtig ermitteln</h2>
+<p>Ein einzelner Stichtag täuscht, etwa direkt vor der Saison oder nach der Inventur. Besser:</p>
+<ul>
+<li><strong>Einfach:</strong> (Anfangsbestand + Endbestand) ÷ 2</li>
+<li><strong>Genauer:</strong> (Anfangsbestand + 12 Monatsendbestände) ÷ 13</li>
+</ul>
+<h2>Was ist ein guter Lagerumschlag?</h2>
+<p>Darauf gibt es keine allgemeine Antwort. Ein Lebensmittelhändler dreht sein Lager viel öfter als ein Ersatzteilhändler mit 30.000 Artikeln. Vergleiche mit Branchenzahlen helfen deshalb wenig. Aussagekräftiger sind:</p>
+<ul>
+<li><strong>Der Vergleich mit dem Vorjahr.</strong> Steigt der Umschlag bei gleicher Lieferfähigkeit, sind Sie auf dem richtigen Weg.</li>
+<li><strong>Der Vergleich der Warengruppen.</strong> Wo dreht sich das Lager deutlich langsamer als im Rest? Dort liegt meist das gebundene Geld.</li>
+</ul>
+<h2>Was ein höherer Umschlag bringt</h2>
+<p>Steigt der Umschlag im Beispiel von 3,5 auf 4,0, sinkt der nötige Bestand bei gleichem Wareneinsatz von 1.200.000 € auf 1.050.000 €. 150.000 Euro sind frei, und bei 20 Prozent Lagerkostensatz sparen Sie rund 30.000 Euro im Jahr.</p>
+<h2>Fünf Hebel für mehr Umschlag</h2>
+<ol>
+<li><strong>Überbestand abbauen.</strong> Nachbestellung aussetzen, bis 90 Tage Reichweite erreicht sind.</li>
+<li><strong>Ladenhüter loswerden.</strong> Sie zählen voll zum Bestand und bringen keinen Wareneinsatz.</li>
+<li><strong>Bestellmengen prüfen.</strong> Kleinere Mengen öfter bestellen, wo Lieferant und Kosten es zulassen.</li>
+<li><strong>Rabattkäufe gegenrechnen.</strong> Ein Mengenrabatt lohnt nur, wenn er größer ist als die Lagerkosten für die längere Liegezeit.</li>
+<li><strong>Sortiment bereinigen.</strong> C-Artikel ohne strategische Bedeutung auslisten oder nur auf Bestellung führen.</li>
+</ol>
+<p>Achten Sie dabei auf die <strong>Lieferfähigkeit</strong>. Ein höherer Umschlag ist nur dann ein Erfolg, wenn die wichtigen A-Artikel weiter verfügbar sind.</p>''',
+'faq': [
+ ('Wie berechnet man den Lagerumschlag?', 'Wareneinsatz pro Jahr geteilt durch den durchschnittlichen Lagerbestand, beides zu Einkaufspreisen. Beispiel: 4,2 Mio. € ÷ 1,2 Mio. € = 3,5.'),
+ ('Was ist die Lagerdauer?', 'Die durchschnittliche Zahl der Tage, die Ware im Lager liegt: 365 geteilt durch den Lagerumschlag. Bei einem Umschlag von 3,5 sind es rund 104 Tage.'),
+ ('Was ist ein guter Lagerumschlag im Handel?', 'Das hängt stark vom Sortiment ab. Aussagekräftiger als Branchenwerte ist der Vergleich mit dem eigenen Vorjahr und zwischen den Warengruppen.'),
+ ('Wie erhöhe ich den Lagerumschlag?', 'Vor allem durch den Abbau von Überbestand und Ladenhütern, kleinere Bestellmengen und das Gegenrechnen von Mengenrabatten, ohne die Lieferfähigkeit der A-Artikel zu gefährden.'),
+],
+'cta_h': 'Wie hoch ist Ihr Lagerumschlag?', 'cta_p': 'Der kostenlose Lagerkosten-Rechner zeigt Umschlag, Reichweite und Lagerkosten aus fünf Zahlen Ihres Jahresabschlusses. Ohne Anmeldung.', 'cta_href': '../rechner.html', 'cta_btn': 'Zum Lagerkosten-Rechner',
+},
+{
+'slug': 'lagerkosten-berechnen',
+'title': 'Was kostet Lagerhaltung? Lagerhaltungskostensatz berechnen · Bestands-Manager.com',
+'h1': 'Was kostet Lagerhaltung? Den Lagerhaltungskostensatz berechnen',
+'desc': 'Lagerhaltungskosten im Handel: die sechs Kostenblöcke, typischer Lagerhaltungskostensatz von 15 bis 25 Prozent, Rechenbeispiel und warum manche Artikel jedes Jahr Geld verbrennen.',
+'date': '2026-11-01', 'date_de': '1. November 2026',
+'about': ['Lagerhaltungskosten', 'Lagerhaltungskostensatz', 'Kapitalbindung'],
+'img': 'inhaberin-im-lager', 'img_alt': 'Eine Inhaberin steht lachend und selbstbewusst in ihrem hellen, aufgeräumten Lager',
+'kurz': 'Lagerhaltungskosten sind alle Kosten, die entstehen, weil Ware im Lager liegt: Zinsen, Veralterung, mengenabhängige Fläche, Handling, Schwund und Versicherung. Im Handel liegen sie meist bei 15 bis 25 Prozent des Lagerwerts pro Jahr. Wer seinen Satz nicht kennt, rechnet mit 20 Prozent: Jeder Euro Ware kostet dann 20 Cent pro Jahr. Die größten Posten sind Zinsen und Veralterung, nicht die Halle.',
+'kurz_list': 'Sechs Kostenblöcke, 15 bis 25 Prozent pro Jahr, Rechenbeispiel.',
+'body': '''<h2>Die sechs Kostenblöcke</h2>
+<ol>
+<li><strong>Zinsen.</strong> Das Geld für die Ware ist ausgegeben. Mit Kredit zahlen Sie Zinsen, ohne Kredit fehlt das Geld für Skonto oder Investitionen. Auch das kostet.</li>
+<li><strong>Veralterung.</strong> Ware, die aus der Mode kommt, technisch überholt ist oder abläuft und abgeschrieben werden muss.</li>
+<li><strong>Fläche</strong>, soweit sie mit der Menge wächst: Außenlager, zusätzliche Regale, Energie. Die Grundmiete zählt nicht, sie fällt auch bei halb leerem Lager an.</li>
+<li><strong>Handling.</strong> Umlagern, Suchen, Zählen bei der Inventur.</li>
+<li><strong>Schwund und Bruch.</strong> Was gestohlen, beschädigt, verlegt oder falsch gebucht wird.</li>
+<li><strong>Versicherung.</strong> Je mehr Ware, desto höher die Versicherungssumme.</li>
+</ol>
+<h2>Rechenbeispiel: 20 Prozent</h2>
+<div class="tw"><table><tr><th>Kostenblock bei 1,2 Mio. € Lagerwert</th><th>Euro pro Jahr</th><th>Anteil</th></tr>
+<tr><td>Zinsen (9 % Kontokorrent)</td><td>108.000 €</td><td>9,0 %</td></tr>
+<tr><td>Veralterung und Abschreibungen</td><td>60.000 €</td><td>5,0 %</td></tr>
+<tr><td>Fläche, mengenabhängig</td><td>30.000 €</td><td>2,5 %</td></tr>
+<tr><td>Handling und Inventur</td><td>18.000 €</td><td>1,5 %</td></tr>
+<tr><td>Schwund und Bruch</td><td>18.000 €</td><td>1,5 %</td></tr>
+<tr><td>Versicherung</td><td>6.000 €</td><td>0,5 %</td></tr>
+<tr><td><strong>Summe</strong></td><td><strong>240.000 €</strong></td><td><strong>20,0 %</strong></td></tr></table></div>
+<p>Die 20 Prozent sind der <strong>Lagerhaltungskostensatz</strong>. 240.000 Euro im Jahr sind rund 660 Euro an jedem einzelnen Tag.</p>
+<h2>Welcher Satz passt zu Ihnen?</h2>
+<p>Im Handel liegt der Satz meist zwischen <strong>15 und 25 Prozent</strong>. Höher liegen Sie mit teurem Kredit, schnell veraltender Ware wie Elektronik oder Mode und viel Bruch. Niedriger mit wenig Fremdkapital, eigener Halle und Ware, die kaum altert, etwa Schrauben oder Rohre. Kennen Sie Ihren Wert nicht, rechnen Sie mit 20 Prozent.</p>
+<h2>Ein Artikel, der Geld verbrennt</h2>
+<p>Ein Thermostatkopf bindet 11.520 Euro. Bei 20 Prozent kostet er 2.304 Euro Lagerkosten im Jahr. Verkauft werden 20 Stück mit je 8 Euro Rohertrag, also 160 Euro. Jedes Jahr verliert der Händler an diesem Artikel über 2.100 Euro, und auf keiner Rechnung taucht das auf.</p>
+<div class="formel">Lagerkosten pro Jahr = Bestandswert × Lagerhaltungskostensatz</div>
+<p>Vergleichen Sie diesen Wert mit dem Rohertrag pro Jahr. Ist er höher, lohnt sich Abverkauf oder Rückgabe fast immer.</p>
+<h2>Was Sie beim Abbau wirklich sparen</h2>
+<p>Nicht alle 20 Prozent fallen sofort weg. Die <strong>Zinsen</strong> sinken mit dem ersten Euro, der zurück aufs Konto kommt. Die <strong>Veralterung</strong> sinkt, wenn keine neuen Ladenhüter nachkommen. <strong>Fläche und Handling</strong> sparen Sie erst, wenn Sie den Platz anders nutzen oder ein Außenlager kündigen. Rechnen Sie den Erfolg deshalb ehrlich: freigesetztes Kapital zuerst, Kostenersparnis danach.</p>''',
+'faq': [
+ ('Wie hoch sind Lagerhaltungskosten im Handel?', 'Meist 15 bis 25 Prozent des durchschnittlichen Lagerwerts pro Jahr. Wer seinen Wert nicht kennt, rechnet mit 20 Prozent.'),
+ ('Wie berechnet man den Lagerhaltungskostensatz?', 'Alle jährlichen Kosten, die durch den Bestand entstehen (Zinsen, Veralterung, mengenabhängige Fläche, Handling, Schwund, Versicherung), geteilt durch den durchschnittlichen Lagerwert.'),
+ ('Was ist der größte Kostenblock im Lager?', 'Meist die Zinsen auf das gebundene Kapital und die Veralterung der Ware, nicht die Miete für die Halle.'),
+ ('Wann verbrennt ein Artikel Geld?', 'Wenn seine Lagerkosten pro Jahr (Bestandswert × Lagerhaltungskostensatz) höher sind als der Rohertrag, den er im Jahr bringt.'),
+],
+'cta_h': 'Was kostet Ihr Lager im Jahr?', 'cta_p': 'Der kostenlose Lagerkosten-Rechner braucht fünf Zahlen aus Ihrem Jahresabschluss. Ohne Anmeldung, Ihre Zahlen bleiben in Ihrem Browser.', 'cta_href': '../rechner.html', 'cta_btn': 'Zum Lagerkosten-Rechner',
+},
+]

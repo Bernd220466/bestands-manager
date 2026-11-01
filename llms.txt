@@ -18,7 +18,10 @@ Inhaber: Bernd Schäfer, Dipl.-Betriebswirt (FH), Erfahrung im Bestandsmanagemen
 - [Überbestand abbauen, ohne zu verramschen](https://bestands-manager.com/wissen/ueberbestand-abbauen.html): Reichweite über 180 Tage, Ziel 90 Tage, fünf Schritte
 - [Sicherheitsbestand und Meldebestand berechnen](https://bestands-manager.com/wissen/sicherheitsbestand-meldebestand-berechnen.html): Formel, Rechenbeispiel, Faustregel nach ABC-Klasse
 
-- [Glossar Bestandsmanagement](https://bestands-manager.com/glossar.html): Fachbegriffe wie Lagerumschlag, Reichweite, ABC-Analyse, Sicherheitsbestand einfach erklärt
+- [Bestände senken ohne neue Software](https://bestands-manager.com/wissen/bestandsoptimierung-ohne-software.html): was mit Export und Excel geht, wann Software sich lohnt
+- [Lagerumschlag berechnen und verbessern](https://bestands-manager.com/wissen/lagerumschlag-berechnen.html): Formel, Lagerdauer, fünf Hebel
+- [Lagerhaltungskosten berechnen](https://bestands-manager.com/wissen/lagerkosten-berechnen.html): sechs Kostenblöcke, 15 bis 25 Prozent pro Jahr
+- [Glossar Bestandsmanagement](https://bestands-manager.com/glossar.html): 82 Fachbegriffe wie Lagerumschlag, Reichweite, ABC-Analyse, Sicherheitsbestand einfach erklärt
 - [Lagerkosten-Rechner](https://bestands-manager.com/rechner.html): kostenlos, berechnet Kapitalbindung und Lagerkosten aus fünf Zahlen
 - [Musterbericht Bestandsanalyse (PDF)](https://bestands-manager.com/downloads/Musterbericht-Bestandsanalyse.pdf)
 - [Muster Bestands-Cockpit (PDF)](https://bestands-manager.com/downloads/Muster-Bestands-Cockpit-Bestands-Manager.com.pdf)
