@@ -14,6 +14,10 @@ Inhaber: Bernd Schäfer, Dipl.-Betriebswirt (FH), Erfahrung im Bestandsmanagemen
 
 ## Wissen und Werkzeuge
 
+- [Ladenhüter erkennen und abbauen](https://bestands-manager.com/wissen/ladenhueter-abbauen.html): ab 180 Tagen ohne Verkauf, sieben Wege zum Abbau, Rechenbeispiel
+- [Überbestand abbauen, ohne zu verramschen](https://bestands-manager.com/wissen/ueberbestand-abbauen.html): Reichweite über 180 Tage, Ziel 90 Tage, fünf Schritte
+- [Sicherheitsbestand und Meldebestand berechnen](https://bestands-manager.com/wissen/sicherheitsbestand-meldebestand-berechnen.html): Formel, Rechenbeispiel, Faustregel nach ABC-Klasse
+
 - [Glossar Bestandsmanagement](https://bestands-manager.com/glossar.html): Fachbegriffe wie Lagerumschlag, Reichweite, ABC-Analyse, Sicherheitsbestand einfach erklärt
 - [Lagerkosten-Rechner](https://bestands-manager.com/rechner.html): kostenlos, berechnet Kapitalbindung und Lagerkosten aus fünf Zahlen
 - [Musterbericht Bestandsanalyse (PDF)](https://bestands-manager.com/downloads/Musterbericht-Bestandsanalyse.pdf)
