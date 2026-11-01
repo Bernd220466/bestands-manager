@@ -171,3 +171,6 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:16px 40px;justify-content:space-bet
 @media (max-width:420px){.logo{font-size:1.3rem}.subnav a.back{font-size:.9rem}}
 .gratis-form iframe{height:580px}
 @media (max-width:560px){.gratis-form iframe{height:720px}}
+
+.buch-teaser{display:grid;grid-template-columns:200px 1fr;gap:36px;align-items:center}
+@media (max-width:560px){.buch-teaser{grid-template-columns:1fr}.buch-teaser img{max-width:180px}}
