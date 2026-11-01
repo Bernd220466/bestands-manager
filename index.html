@@ -95,8 +95,8 @@
           <p class="verdict" id="verdict">Noch keine Antworten.</p>
           <p class="small" id="advice">Beantworten Sie alle 10 Fragen für eine Einschätzung.</p>
           <div class="lead" style="display:grid;gap:10px;margin-top:16px">
-            <p><strong>Ihr nächster Schritt:</strong> Der Gratis „Ladenhüter-Schnellcheck“ zeigt Ihnen in 15 Minuten, wie viel Geld in Ware steckt, die sich nicht mehr verkauft.</p>
-            <a class="btn btn-primary" href="#gratis">Zum Gratis-Excel</a>
+            <p><strong>Ergebnis mitnehmen:</strong> Fordern Sie das Gratis-Paket an. Nach der Bestätigung speichern Sie Ihr Testergebnis als PDF und bekommen den Ladenhüter-Schnellcheck (Excel) und die Buchvorschau „Geld im Regal“.</p>
+            <a class="btn btn-primary" href="#gratis">Ergebnis und Gratis-Paket anfordern</a>
           </div>
         </div>
       </div>
@@ -284,6 +284,7 @@ function update(){
   if(sum>=15){v.textContent="Gut aufgestellt.";v.classList.add("good");m.style.background="var(--good)";a.textContent="Ihr Lager ist im Griff. Mit dem Geld-im-Regal-Check prüfen Sie selbst, ob sich irgendwo doch Ladenhüter angesammelt haben.";}
   else if(sum>=8){v.textContent="Solide Basis mit Lücken.";v.classList.add("warn");m.style.background="var(--warn)";a.textContent="In den Bereichen mit „Teilweise“ und „Nein“ steckt meist gebundenes Kapital. Der Geld-im-Regal-Check (49 €) zeigt, wie viel. Oder die Bestandsanalyse, wenn Sie es mit mir zusammen machen wollen.";}
   else{v.textContent="Hier liegt viel Geld im Lager.";v.classList.add("bad");m.style.background="var(--bad)";a.textContent="Viele Grundlagen fehlen noch. Das ist die beste Ausgangslage: Hier bringt eine Analyse am schnellsten Ergebnisse. Buchen Sie ein kostenloses Gespräch.";}
+  try{localStorage.setItem('bm_selbsttest',JSON.stringify({d:new Date().toLocaleDateString('de-DE'),sum:sum,verdict:v.textContent,advice:a.textContent,qa:QUESTIONS.map((q,i)=>{const c=document.querySelector(`input[name=q${i}]:checked`);return [typeof q==='string'?q:(q[0]||q.q||''),c?c.parentElement.textContent.trim():''];})}));}catch(e){}
 }
 list.addEventListener("change", update);
 </script>
