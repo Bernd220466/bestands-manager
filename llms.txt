@@ -1,0 +1,28 @@
+# Bestands-Manager.com
+
+> Bestandsoptimierung für Groß- und Einzelhändler mit eigenem Lager in Deutschland, Österreich und der Schweiz. Bernd Schäfer hilft Händlern, gebundenes Kapital aus dem Lager zurückzuholen – ohne neue Software, mit den Daten aus der vorhandenen Warenwirtschaft. Unabhängige Beratung, kein Softwareverkauf.
+
+Inhaber: Bernd Schäfer, Dipl.-Betriebswirt (FH), Erfahrung im Bestandsmanagement und Warehousemanagement. Sitz: Thomas-Mann-Straße 12, 67574 Osthofen (Rheinland-Pfalz). Kontakt: info@bestands-manager.com, Telefon +49 156 79657888. Alle Leistungen laufen remote.
+
+## Angebote
+
+- [Ladenhüter-Schnellcheck](https://bestands-manager.com/#gratis): kostenloses Excel-Werkzeug, zeigt die 20 teuersten Ladenhüter
+- [Geld-im-Regal-Check](https://bestands-manager.com/geld-im-regal-check.html): Excel-Werkzeug für 49 €, vergibt jedem Artikel einen Status (Ladenhüter, Überbestand, Einschlafend, Fehlmengen-Risiko) und berechnet das freisetzbare Kapital
+- [Bestandsanalyse](https://bestands-manager.com/#angebot): Auswertung des gesamten Sortiments mit 90-Tage-Maßnahmenplan, Festpreis ab 490 €, Garantie: kein Einsparpotenzial, kein Honorar
+- [Bestands-Cockpit](https://bestands-manager.com/bestands-cockpit.html): monatliches Bestandscontrolling für 99 € pro Monat, monatlich kündbar, im Anschluss an die Bestandsanalyse
+- [Praxisbuch „Geld im Regal“](https://bestands-manager.com/buch.html): E-Book für Händler, 9,90 €, Buchvorschau gratis
+
+## Wissen und Werkzeuge
+
+- [Glossar Bestandsmanagement](https://bestands-manager.com/glossar.html): Fachbegriffe wie Lagerumschlag, Reichweite, ABC-Analyse, Sicherheitsbestand einfach erklärt
+- [Lagerkosten-Rechner](https://bestands-manager.com/rechner.html): kostenlos, berechnet Kapitalbindung und Lagerkosten aus fünf Zahlen
+- [Musterbericht Bestandsanalyse (PDF)](https://bestands-manager.com/downloads/Musterbericht-Bestandsanalyse.pdf)
+- [Muster Bestands-Cockpit (PDF)](https://bestands-manager.com/downloads/Muster-Bestands-Cockpit-Bestands-Manager.com.pdf)
+
+## Bewertungsregeln (in allen Werkzeugen gleich)
+
+- Ladenhüter: seit 180 Tagen oder länger nicht verkauft
+- Überbestand: Bestand reicht länger als 180 Tage; freisetzbar ist alles über 90 Tage Reichweite
+- Einschlafend: Absatz mindestens 40 % unter Vorjahr
+- Fehlmengen-Risiko: Reichweite kürzer als Lieferzeit plus 7 Tage
+- Lagerkostensatz Standard: 20 % pro Jahr
