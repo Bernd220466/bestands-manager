@@ -22,13 +22,15 @@ ARTICLES = [
 <p>Alles andere bindet Geld, ohne etwas zurückzugeben. Dazu kommen Lagerkosten von typischerweise 15 bis 25 Prozent des Warenwerts pro Jahr für Zinsen, Fläche, Versicherung, Schwund und Veralterung.</p>
 <h2>Der wichtigste Gedanke: Was Sie bezahlt haben, ist weg</h2>
 <p>Die meisten Ladenhüter-Aktionen scheitern an einem Satz: „Den haben wir für 18 Euro gekauft, für 6 Euro gebe ich ihn nicht her.“ Doch die 18 Euro kommen nicht zurück, egal wie lange der Karton noch steht. Entscheidend ist nur: Was bringt ab heute mehr?</p>
-<p>Beispiel: 640 Thermostatköpfe, Einkaufspreis 18 €, Lagerkostensatz 20 Prozent, verkauft werden noch 20 Stück im Jahr mit 8 € Rohertrag.</p>
-<div class="tw"><table><tr><th></th><th>Behalten</th><th>An Restpostenhändler (6 € je Stück)</th></tr>
-<tr><td>Geld sofort</td><td>0 €</td><td>3.840 €</td></tr>
-<tr><td>Lagerkosten pro Jahr</td><td>2.304 €</td><td>0 €</td></tr>
-<tr><td>Rohertrag pro Jahr</td><td>160 €</td><td>0 €</td></tr>
-<tr><td><strong>Ergebnis nach einem Jahr</strong></td><td><strong>– 2.144 €</strong></td><td><strong>+ 3.840 €</strong></td></tr></table></div>
-<p>Nach einem Jahr liegen fast 6.000 Euro zwischen beiden Wegen, und jedes weitere Jahr Behalten kostet wieder gut 2.100 Euro. Ware, die nicht mehr zum Einkaufspreis verkäuflich ist, muss in der Bilanz oft ohnehin abgewertet werden. Sprechen Sie vor größeren Aktionen kurz mit Ihrem Steuerberater.</p>
+<p>Beispiel: 640 Thermostatköpfe, Einkaufspreis 18 €, also 11.520 € Einkaufswert. Verkauft werden noch 20 Stück im Jahr zu je 26 € (8 € Rohertrag). Ein Restpostenhändler zahlt heute 6 € je Stück. Lagerkostensatz 20 Prozent.</p>
+<p>Gerechnet wird mit dem, was die Ware heute bringt, also 3.840 €. Das ist das Geld, das im Regal festliegt. Die 11.520 € Einkaufswert kommen in der Rechnung nicht vor.</p>
+<div class="tw"><table><tr><th>Nach einem Jahr</th><th>Behalten</th><th>Heute an Restpostenhändler</th></tr>
+<tr><td>Erlös heute</td><td>0 €</td><td>3.840 €</td></tr>
+<tr><td>Erlös aus Verkäufen im Jahr</td><td>520 € (20 × 26 €)</td><td>0 €</td></tr>
+<tr><td>Restbestand</td><td>620 Stück, höchstens 3.720 € wert (bei 6 €)</td><td>0 €</td></tr>
+<tr><td>Lagerkosten (20 % auf 3.840 €)</td><td>– 768 €</td><td>0 €</td></tr>
+<tr><td><strong>Stand nach einem Jahr</strong></td><td><strong>höchstens 3.472 €</strong></td><td><strong>3.840 €</strong></td></tr></table></div>
+<p>Selbst wenn der Restpostenpreis ein Jahr lang hält, stehen Sie mit dem Behalten rund 370 Euro schlechter da. Fällt er auf 4 Euro, sind es gut 1.600 Euro, und der Platz ist ein Jahr länger belegt. Jedes weitere Jahr wiederholt sich die Rechnung, während der Restwert weiter sinkt. Ware, die nicht mehr zum Einkaufspreis verkäuflich ist, muss in der Bilanz oft ohnehin abgewertet werden. Sprechen Sie vor größeren Aktionen kurz mit Ihrem Steuerberater.</p>
 <h2>Sieben Wege, Ladenhüter loszuwerden</h2>
 <ol>
 <li><strong>Zurück an den Lieferanten</strong>, oft gegen Gebühr oder im Tausch gegen Ware, die Sie brauchen.</li>
@@ -50,7 +52,7 @@ ARTICLES = [
 </ul>''',
 'faq': [
  ('Ab wie vielen Tagen ohne Verkauf ist ein Artikel ein Ladenhüter?', 'Im Handel hat sich die Grenze von 180 Tagen ohne Verkauf bewährt. Bei Ersatzteilen und sehr langsam drehendem Sortiment sind 365 Tage oft passender.'),
- ('Soll ich Ladenhüter unter Einkaufspreis verkaufen?', 'Oft ja. Der Einkaufspreis ist bereits ausgegeben. Entscheidend ist, ob Behalten mit Lagerkosten von rund 20 Prozent pro Jahr mehr bringt als der Erlös heute. Bei echten Ladenhütern ist das fast nie der Fall.'),
+ ('Soll ich Ladenhüter unter Einkaufspreis verkaufen?', 'Oft ja. Der Einkaufspreis ist bereits ausgegeben. Entscheidend ist, ob Behalten mehr bringt als der Erlös heute: die Verkäufe des nächsten Jahres plus der dann noch erzielbare Restwert, minus Lagerkosten von rund 20 Prozent auf den heutigen Verwertungswert. Bei echten Ladenhütern ist das fast nie der Fall.'),
  ('Wie viel Kapital lässt sich aus Ladenhütern freisetzen?', 'Vorsichtig gerechnet etwa ein Drittel des gebundenen Kapitals innerhalb von 12 Monaten. Bestands-Manager.com setzt 35 Prozent an.'),
  ('Wie finde ich meine Ladenhüter schnell?', 'Mit einem Export aus der Warenwirtschaft mit Artikelnummer, Bestand, Einkaufspreis und Datum des letzten Verkaufs. Der kostenlose Ladenhüter-Schnellcheck von Bestands-Manager.com zeigt daraus die 20 teuersten Ladenhüter in Euro.'),
 ],
@@ -258,7 +260,7 @@ ARTICLES += [
  ('Was ist ein guter Lagerumschlag im Handel?', 'Das hängt stark vom Sortiment ab. Aussagekräftiger als Branchenwerte ist der Vergleich mit dem eigenen Vorjahr und zwischen den Warengruppen.'),
  ('Wie erhöhe ich den Lagerumschlag?', 'Vor allem durch den Abbau von Überbestand und Ladenhütern, kleinere Bestellmengen und das Gegenrechnen von Mengenrabatten, ohne die Lieferfähigkeit der A-Artikel zu gefährden.'),
 ],
-'cta_h': 'Wie hoch ist Ihr Lagerumschlag?', 'cta_p': 'Der kostenlose Lagerkosten-Rechner zeigt Umschlag, Reichweite und Lagerkosten aus fünf Zahlen Ihres Jahresabschlusses. Ohne Anmeldung.', 'cta_href': '../rechner.html', 'cta_btn': 'Zum Lagerkosten-Rechner',
+'cta_h': 'Wie hoch ist Ihr Lagerumschlag?', 'cta_p': 'Der kostenlose Lagerkosten-Rechner zeigt Umschlag, Reichweite und Lagerkosten aus vier Zahlen Ihres Jahresabschlusses und Ihrem Lagerkostensatz. Ohne Anmeldung.', 'cta_href': '../rechner.html', 'cta_btn': 'Zum Lagerkosten-Rechner',
 },
 {
 'slug': 'lagerkosten-berechnen',
@@ -292,17 +294,18 @@ ARTICLES += [
 <h2>Welcher Satz passt zu Ihnen?</h2>
 <p>Im Handel liegt der Satz meist zwischen <strong>15 und 25 Prozent</strong>. Höher liegen Sie mit teurem Kredit, schnell veraltender Ware wie Elektronik oder Mode und viel Bruch. Niedriger mit wenig Fremdkapital, eigener Halle und Ware, die kaum altert, etwa Schrauben oder Rohre. Kennen Sie Ihren Wert nicht, rechnen Sie mit 20 Prozent.</p>
 <h2>Ein Artikel, der Geld verbrennt</h2>
-<p>Ein Thermostatkopf bindet 11.520 Euro. Bei 20 Prozent kostet er 2.304 Euro Lagerkosten im Jahr. Verkauft werden 20 Stück mit je 8 Euro Rohertrag, also 160 Euro. Jedes Jahr verliert der Händler an diesem Artikel über 2.100 Euro, und auf keiner Rechnung taucht das auf.</p>
+<p>640 Thermostatköpfe zu je 18 Euro binden 11.520 Euro. Bei 20 Prozent stehen dafür rechnerisch 2.304 Euro Lagerkosten im Jahr in der Kalkulation. Verkauft werden 20 Stück mit je 8 Euro Rohertrag, also 160 Euro. Auf dem Papier ein Minus von über 2.100 Euro im Jahr, das auf keiner Rechnung auftaucht.</p>
+<p>Ein Teil davon ist Kalkulation, kein Geldabfluss: Fläche und Handling sparen Sie erst, wenn Sie den Platz anders nutzen. Die Zahl zeigt, dass der Artikel nicht nachbestellt werden darf. Ob sich ein Abverkauf lohnt, entscheiden Sie mit dem heutigen Verwertungswert der Ware, nicht mit dem Einkaufspreis. Das Rechenbeispiel dazu steht im <a href="ladenhueter-abbauen.html">Leitfaden Ladenhüter</a>.</p>
 <div class="formel">Lagerkosten pro Jahr = Bestandswert × Lagerhaltungskostensatz</div>
-<p>Vergleichen Sie diesen Wert mit dem Rohertrag pro Jahr. Ist er höher, lohnt sich Abverkauf oder Rückgabe fast immer.</p>
+<p>Vergleichen Sie diesen Wert mit dem Rohertrag pro Jahr. Ist er höher, gehört der Artikel auf die Prüfliste: Nachbestellung stoppen, Rückgabe oder Abverkauf prüfen.</p>
 <h2>Was Sie beim Abbau wirklich sparen</h2>
 <p>Nicht alle 20 Prozent fallen sofort weg. Die <strong>Zinsen</strong> sinken mit dem ersten Euro, der zurück aufs Konto kommt. Die <strong>Veralterung</strong> sinkt, wenn keine neuen Ladenhüter nachkommen. <strong>Fläche und Handling</strong> sparen Sie erst, wenn Sie den Platz anders nutzen oder ein Außenlager kündigen. Rechnen Sie den Erfolg deshalb ehrlich: freigesetztes Kapital zuerst, Kostenersparnis danach.</p>''',
 'faq': [
  ('Wie hoch sind Lagerhaltungskosten im Handel?', 'Meist 15 bis 25 Prozent des durchschnittlichen Lagerwerts pro Jahr. Wer seinen Wert nicht kennt, rechnet mit 20 Prozent.'),
  ('Wie berechnet man den Lagerhaltungskostensatz?', 'Alle jährlichen Kosten, die durch den Bestand entstehen (Zinsen, Veralterung, mengenabhängige Fläche, Handling, Schwund, Versicherung), geteilt durch den durchschnittlichen Lagerwert.'),
  ('Was ist der größte Kostenblock im Lager?', 'Meist die Zinsen auf das gebundene Kapital und die Veralterung der Ware, nicht die Miete für die Halle.'),
- ('Wann verbrennt ein Artikel Geld?', 'Wenn seine Lagerkosten pro Jahr (Bestandswert × Lagerhaltungskostensatz) höher sind als der Rohertrag, den er im Jahr bringt.'),
+ ('Wann verbrennt ein Artikel Geld?', 'Wenn seine Lagerkosten pro Jahr (Bestandswert × Lagerhaltungskostensatz) höher sind als der Rohertrag, den er im Jahr bringt. Dann gehört er auf die Prüfliste. Ob sich ein Abverkauf lohnt, entscheiden Sie mit dem heutigen Verwertungswert der Ware, nicht mit dem Einkaufspreis.'),
 ],
-'cta_h': 'Was kostet Ihr Lager im Jahr?', 'cta_p': 'Der kostenlose Lagerkosten-Rechner braucht fünf Zahlen aus Ihrem Jahresabschluss. Ohne Anmeldung, Ihre Zahlen bleiben in Ihrem Browser.', 'cta_href': '../rechner.html', 'cta_btn': 'Zum Lagerkosten-Rechner',
+'cta_h': 'Was kostet Ihr Lager im Jahr?', 'cta_p': 'Der kostenlose Lagerkosten-Rechner braucht vier Zahlen aus Ihrem Jahresabschluss und Ihren Lagerkostensatz. Ohne Anmeldung, Ihre Zahlen bleiben in Ihrem Browser.', 'cta_href': '../rechner.html', 'cta_btn': 'Zum Lagerkosten-Rechner',
 },
 ]
