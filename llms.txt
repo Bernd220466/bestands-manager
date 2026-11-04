@@ -32,5 +32,6 @@ Inhaber: Bernd Schäfer, Dipl.-Betriebswirt (FH), Erfahrung im Bestandsmanagemen
 - Ladenhüter: seit 180 Tagen oder länger nicht verkauft
 - Überbestand: Bestand reicht länger als 180 Tage; freisetzbar ist alles über 90 Tage Reichweite
 - Einschlafend: Absatz mindestens 40 % unter Vorjahr
-- Fehlmengen-Risiko: Reichweite kürzer als Lieferzeit plus 7 Tage
+- Fehlmengen-Risiko: Reichweite unter einer einstellbaren Grenze (Geld-im-Regal-Check: Standard 14 Tage; Empfehlung: übliche Lieferzeit plus 7 Tage)
+- Realistisch abbaubar (Geld-im-Regal-Check): Standard 50 % von Ladenhüter- und Überbestandswert, einstellbar
 - Lagerkostensatz Standard: 20 % pro Jahr

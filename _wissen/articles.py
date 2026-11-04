@@ -42,7 +42,7 @@ ARTICLES = [
 <li><strong>Abschreiben und entsorgen</strong>, wenn gar nichts geht. Dann sind wenigstens Platz und Lagerkosten frei.</li>
 </ol>
 <h2>Wie viel Geld kommt realistisch zurück?</h2>
-<p>Nicht jeder Ladenhüter lässt sich zu Geld machen. Rechnen Sie vorsichtig: Etwa <strong>ein Drittel</strong> des Kapitals in Ladenhütern kommt innerhalb von 12 Monaten realistisch zurück. Alle Werkzeuge von Bestands-Manager.com setzen dafür 35 Prozent an. Bei 180.000 Euro in Ladenhütern sind das rund 63.000 Euro, plus freier Platz und gesparte Lagerkosten.</p>
+<p>Nicht jeder Ladenhüter lässt sich zu Geld machen. Rechnen Sie vorsichtig: Etwa <strong>ein Drittel</strong> des Kapitals in Ladenhütern kommt innerhalb von 12 Monaten realistisch zurück. Bei 180.000 Euro in Ladenhütern sind das rund 60.000 Euro, plus freier Platz und gesparte Lagerkosten. Überbestand lässt sich meist ohne Rabatt abbauen, dort ist mehr drin. Im Geld-im-Regal-Check stellen Sie den Anteil selbst ein; voreingestellt sind 50 Prozent für Ladenhüter und Überbestand zusammen.</p>
 <h2>Damit keine neuen Ladenhüter entstehen</h2>
 <ul>
 <li><strong>Bestellsperre setzen.</strong> Erkannte Ladenhüter in der Warenwirtschaft als Auslaufartikel kennzeichnen.</li>
@@ -53,7 +53,7 @@ ARTICLES = [
 'faq': [
  ('Ab wie vielen Tagen ohne Verkauf ist ein Artikel ein Ladenhüter?', 'Im Handel hat sich die Grenze von 180 Tagen ohne Verkauf bewährt. Bei Ersatzteilen und sehr langsam drehendem Sortiment sind 365 Tage oft passender.'),
  ('Soll ich Ladenhüter unter Einkaufspreis verkaufen?', 'Oft ja. Der Einkaufspreis ist bereits ausgegeben. Entscheidend ist, ob Behalten mehr bringt als der Erlös heute: die Verkäufe des nächsten Jahres plus der dann noch erzielbare Restwert, minus Lagerkosten von rund 20 Prozent auf den heutigen Verwertungswert. Bei echten Ladenhütern ist das fast nie der Fall.'),
- ('Wie viel Kapital lässt sich aus Ladenhütern freisetzen?', 'Vorsichtig gerechnet etwa ein Drittel des gebundenen Kapitals innerhalb von 12 Monaten. Bestands-Manager.com setzt 35 Prozent an.'),
+ ('Wie viel Kapital lässt sich aus Ladenhütern freisetzen?', 'Vorsichtig gerechnet etwa ein Drittel des gebundenen Kapitals innerhalb von 12 Monaten. Im Geld-im-Regal-Check stellen Sie den Anteil selbst ein; voreingestellt sind 50 Prozent für Ladenhüter und Überbestand zusammen, weil sich Überbestand meist ohne Rabatt abbauen lässt.'),
  ('Wie finde ich meine Ladenhüter schnell?', 'Mit einem Export aus der Warenwirtschaft mit Artikelnummer, Bestand, Einkaufspreis und Datum des letzten Verkaufs. Der kostenlose Ladenhüter-Schnellcheck von Bestands-Manager.com zeigt daraus die 20 teuersten Ladenhüter in Euro.'),
 ],
 'cta_h': 'Wie viel Geld liegt in Ihren Ladenhütern?', 'cta_p': 'Der kostenlose Ladenhüter-Schnellcheck (Excel) zeigt es Ihnen in 15 Minuten, mit Ihrem eigenen Export aus der Warenwirtschaft.', 'cta_href': '../index.html#gratis', 'cta_btn': 'Gratis-Paket anfordern',
