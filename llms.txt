@@ -8,7 +8,7 @@ Inhaber: Bernd Schäfer, Dipl.-Betriebswirt (FH), Erfahrung im Bestandsmanagemen
 
 - [Ladenhüter-Schnellcheck](https://bestands-manager.com/#gratis): kostenloses Excel-Werkzeug, zeigt die 20 teuersten Ladenhüter
 - [Geld-im-Regal-Check](https://bestands-manager.com/geld-im-regal-check.html): Excel-Werkzeug für 49 €, vergibt jedem Artikel einen Status (Ladenhüter, Überbestand, Einschlafend, Fehlmengen-Risiko) und berechnet das freisetzbare Kapital
-- [Bestandsanalyse](https://bestands-manager.com/#angebot): Auswertung des gesamten Sortiments mit 90-Tage-Maßnahmenplan, Festpreis ab 490 €, Garantie: kein Einsparpotenzial, kein Honorar
+- [Bestandsanalyse](https://bestands-manager.com/#angebot): Auswertung des gesamten Sortiments mit 90-Tage-Maßnahmenplan, Festpreis ab 490 €, Festpreise nach Artikelzahl (bis 2.500: 490 €, bis 10.000: 790 €, bis 25.000: 1.290 €), Garantie: weniger als das Zehnfache des Preises an freisetzbarem Kapital gefunden, kein Honorar
 - [Bestands-Cockpit](https://bestands-manager.com/bestands-cockpit.html): monatliches Bestandscontrolling für 99 € pro Monat, monatlich kündbar, im Anschluss an die Bestandsanalyse
 - [Prompt-Paket „KI im Einkauf und Lager“](https://bestands-manager.com/ki-prompts.html): 30 geprüfte Prompts für ChatGPT, Copilot & Co. mit Stellschrauben, Risiken und Prüfschritten, 9,90 €, Leseprobe gratis
 - [Praxisbuch „Geld im Regal“](https://bestands-manager.com/buch.html): E-Book für Händler, 9,90 €, Buchvorschau gratis
