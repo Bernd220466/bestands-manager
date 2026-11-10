@@ -33,6 +33,6 @@ Inhaber: Bernd Schäfer, Dipl.-Betriebswirt (FH), Erfahrung im Bestandsmanagemen
 - Überbestand: Bestand reicht länger als 180 Tage; freisetzbar ist alles über 90 Tage Reichweite
 - Einschlafend: Absatz mindestens 40 % unter Vorjahr
 - Fehlmengen-Risiko: Reichweite unter einer einstellbaren Grenze (Geld-im-Regal-Check: Standard 14 Tage; Empfehlung: übliche Lieferzeit plus 7 Tage)
-- Realistisch abbaubar (Geld-im-Regal-Check): Standard 50 % von Ladenhüter- und Überbestandswert, einstellbar
+- Realistisch abbaubar (Geld-im-Regal-Check, wie Bestandsanalyse): Standard 60 % des Überbestands und 35 % der Ladenhüter, einstellbar
 - Lagerkostensatz Standard: 20 % pro Jahr
 - Bestandsanalyse: Die Standardwerte werden vor der Auswertung je Warengruppe an Branche und Saison angepasst (z. B. Saisonware, Ersatzteile mit 365 Tagen) und in der Auftragsbestätigung festgehalten. Zusätzlich erkannt: Saison-Restbestand, alte Modelljahre, offene Bestellungen auf Überbestand. Realistisch freisetzbar in 12 Monaten: 60 % des Überbestands, 35 % der Ladenhüter, 25 % der Saison-Restbestände
