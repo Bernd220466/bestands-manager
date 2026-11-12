@@ -1,0 +1,7 @@
+# Sicherheit: lokale Claude-Code-Einstellungen und Zugangsdaten nie einchecken
+.claude/
+.env
+.env.*
+*.pem
+*.key
+id_rsa*
