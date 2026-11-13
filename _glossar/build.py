@@ -73,6 +73,12 @@ page=f'''<!doctype html>
 .g-cta a.btn{{display:inline-block;background:var(--orange);color:#fff;text-decoration:none;font-weight:700;padding:11px 18px;border-radius:8px;margin:4px 8px 4px 0}}
 .g-cta a.btn.ghost{{background:transparent;border:1px solid var(--on-navy-muted);color:var(--on-navy)}}
 </style>
+<!-- Privacy-friendly analytics by Plausible -->
+<script async src="https://plausible.io/js/pa-BlTD1vB9gPIGbGxfx2cd7.js"></script>
+<script>
+  window.plausible=window.plausible||function(){{(plausible.q=plausible.q||[]).push(arguments)}},plausible.init=plausible.init||function(i){{plausible.o=i||{{}}}};
+  plausible.init()
+</script>
 </head>
 <body>
 <header class="top">
