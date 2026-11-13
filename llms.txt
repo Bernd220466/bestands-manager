@@ -8,7 +8,7 @@ Inhaber: Bernd Schäfer, Dipl.-Betriebswirt (FH), Erfahrung im Bestandsmanagemen
 
 - [Ladenhüter-Schnellcheck](https://bestands-manager.com/#gratis): kostenloses Excel-Werkzeug, zeigt die 20 teuersten Ladenhüter
 - [Geld-im-Regal-Check](https://bestands-manager.com/geld-im-regal-check.html): Excel-Werkzeug für 49 €, vergibt jedem Artikel einen Status (Ladenhüter, Überbestand, Einschlafend, Fehlmengen-Risiko) und berechnet das freisetzbare Kapital
-- [Bestandsanalyse](https://bestands-manager.com/#angebot): Auswertung des gesamten Sortiments mit 90-Tage-Maßnahmenplan, Festpreis ab 490 €, Garantie: kein Einsparpotenzial, kein Honorar
+- [Bestandsanalyse](https://bestands-manager.com/#angebot): Auswertung des gesamten Sortiments mit 90-Tage-Maßnahmenplan, Festpreis ab 490 €, Festpreise nach Artikelzahl (bis 2.500: 490 €, bis 10.000: 790 €, bis 25.000: 1.290 €), Garantie: weist die Analyse weniger als das Zehnfache des Preises als realistisch freisetzbares Kapital aus, kein Honorar (Voraussetzung: vollständiger Export nach Checkliste)
 - [Bestands-Cockpit](https://bestands-manager.com/bestands-cockpit.html): monatliches Bestandscontrolling für 99 € pro Monat, monatlich kündbar, im Anschluss an die Bestandsanalyse
 - [Prompt-Paket „KI im Einkauf und Lager“](https://bestands-manager.com/ki-prompts.html): 30 geprüfte Prompts für ChatGPT, Copilot & Co. mit Stellschrauben, Risiken und Prüfschritten, 9,90 €, Leseprobe gratis
 - [Praxisbuch „Geld im Regal“](https://bestands-manager.com/buch.html): E-Book für Händler, 9,90 €, Buchvorschau gratis
@@ -27,11 +27,12 @@ Inhaber: Bernd Schäfer, Dipl.-Betriebswirt (FH), Erfahrung im Bestandsmanagemen
 - [Musterbericht Bestandsanalyse (PDF)](https://bestands-manager.com/downloads/Musterbericht-Bestandsanalyse.pdf)
 - [Muster Bestands-Cockpit (PDF)](https://bestands-manager.com/downloads/Muster-Bestands-Cockpit-Bestands-Manager.com.pdf)
 
-## Bewertungsregeln (in allen Werkzeugen gleich)
+## Bewertungsregeln (gleiche Logik und Standardwerte; die Bestandsanalyse passt Grenzen je Warengruppe an)
 
 - Ladenhüter: seit 180 Tagen oder länger nicht verkauft
 - Überbestand: Bestand reicht länger als 180 Tage; freisetzbar ist alles über 90 Tage Reichweite
 - Einschlafend: Absatz mindestens 40 % unter Vorjahr
 - Fehlmengen-Risiko: Reichweite unter einer einstellbaren Grenze (Geld-im-Regal-Check: Standard 14 Tage; Empfehlung: übliche Lieferzeit plus 7 Tage)
-- Realistisch abbaubar (Geld-im-Regal-Check): Standard 50 % von Ladenhüter- und Überbestandswert, einstellbar
+- Realistisch abbaubar (Geld-im-Regal-Check, wie Bestandsanalyse): Standard 60 % des Überbestands und 35 % der Ladenhüter, einstellbar
 - Lagerkostensatz Standard: 20 % pro Jahr
+- Bestandsanalyse: Die Standardwerte werden vor der Auswertung je Warengruppe an Branche und Saison angepasst (z. B. Saisonware, Ersatzteile mit 365 Tagen) und in der Auftragsbestätigung festgehalten. Zusätzlich erkannt: Saison-Restbestand, alte Modelljahre, offene Bestellungen auf Überbestand. Realistisch freisetzbar in 12 Monaten: 60 % des Überbestands, 35 % der Ladenhüter, 25 % der Saison-Restbestände
