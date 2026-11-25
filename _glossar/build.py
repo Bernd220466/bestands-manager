@@ -106,7 +106,7 @@ page=f'''<!doctype html>
   <p>Wenden Sie die Begriffe direkt auf Ihre Zahlen an – kostenlos und ohne Anmeldung.</p>
   <a class="btn" href="rechner.html">Lagerkosten-Rechner</a><a class="btn ghost" href="index.html#check">Lager-Selbsttest</a>
 </section>
-<p class="small" style="margin-top:24px;color:var(--muted)">Stand: Oktober 2026 · {len(T)} Begriffe · Alle Erklärungen sind eigene Texte von Bestands-Manager.com.</p>
+<p class="small" style="margin-top:24px;color:var(--muted)">Stand: November 2026 · {len(T)} Begriffe · Alle Erklärungen sind eigene Texte von Bestands-Manager.com.</p>
 </main>
 <footer>
   <div class="wrap">
