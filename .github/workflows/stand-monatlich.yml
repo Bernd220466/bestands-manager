@@ -1,0 +1,44 @@
+# Setzt am 1. jedes Monats die Angabe „Stand: <Monat> <Jahr>“ auf der Startseite
+# und im Glossar auf den aktuellen Monat (Wunsch von Bernd, 25.11.2026).
+# Ändert nur diese eine Zeile, keine Inhalte und kein Sitemap-Datum.
+name: Stand monatlich aktualisieren
+
+on:
+  schedule:
+    - cron: "17 5 1 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+
+jobs:
+  stand:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Stand-Zeile ersetzen
+        run: |
+          python3 - <<'PY'
+          import datetime, re, zoneinfo
+          monate = ["Januar","Februar","März","April","Mai","Juni","Juli","August","September","Oktober","November","Dezember"]
+          heute = datetime.datetime.now(zoneinfo.ZoneInfo("Europe/Berlin"))
+          neu = f"Stand: {monate[heute.month-1]} {heute.year}"
+          muster = re.compile(r"Stand: (" + "|".join(monate) + r") \d{4}")
+          for datei in ["index.html", "glossar.html", "_glossar/build.py"]:
+              text = open(datei, encoding="utf-8").read()
+              text_neu = muster.sub(neu, text)
+              if text_neu != text:
+                  open(datei, "w", encoding="utf-8").write(text_neu)
+                  print(datei, "->", neu)
+          PY
+      - name: Speichern und veröffentlichen
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if git diff --quiet; then echo "Stand ist schon aktuell."; exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -am "Stand auf aktuellen Monat gesetzt (automatisch)"
+          git push
+          gh api -X POST "repos/${GITHUB_REPOSITORY}/pages/builds" || echo "Pages-Build startet über den Push."
