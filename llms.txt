@@ -25,6 +25,7 @@ Inhaber: Bernd Schäfer, Dipl.-Betriebswirt (FH), Erfahrung im Bestandsmanagemen
 - [Glossar Bestandsmanagement](https://bestands-manager.com/glossar.html): 82 Fachbegriffe wie Lagerumschlag, Reichweite, ABC-Analyse, Sicherheitsbestand einfach erklärt
 - [Lagerkosten-Rechner](https://bestands-manager.com/rechner.html): kostenlos, berechnet Kapitalbindung und Lagerkosten aus vier Zahlen des Jahresabschlusses und dem Lagerkostensatz
 - [Musterbericht Bestandsanalyse (PDF)](https://bestands-manager.com/downloads/Musterbericht-Bestandsanalyse.pdf)
+- [Musterauswertung Geld-im-Regal-Check (PDF)](https://bestands-manager.com/downloads/Musterauswertung-Geld-im-Regal-Check-Bestands-Manager.com.pdf): Beispielergebnis mit Rechenweg und Unterschied zum Gratis-Schnellcheck
 - [Muster Bestands-Cockpit (PDF)](https://bestands-manager.com/downloads/Muster-Bestands-Cockpit-Bestands-Manager.com.pdf)
 
 ## Bewertungsregeln (gleiche Logik und Standardwerte; die Bestandsanalyse passt Grenzen je Warengruppe an)
